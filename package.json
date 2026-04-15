@@ -3,7 +3,9 @@
         "start": "node index.js"
     },
     "dependencies": {
+        "axios": "^1.15.0",
         "discord.js": "^14.26.3",
-        "dotenv": "^17.4.2"
+        "dotenv": "^17.4.2",
+        "openai": "^6.34.0"
     }
 }

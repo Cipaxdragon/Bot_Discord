@@ -1,8 +1,4 @@
-const { Configuration, OpenAIApi } = require('openai');
-require('dotenv').config();
-
-const configuration = new Configuration({ apiKey: process.env.OPENAI_API_KEY });
-const openai = new OpenAIApi(configuration);
+const axios = require('axios');
 
 module.exports = {
     name: 'gpt',
@@ -12,15 +8,16 @@ module.exports = {
         }
         const prompt = args.join(' ');
         try {
-            const response = await openai.createChatCompletion({
-                model: 'gpt-3.5-turbo',
-                messages: [{ role: 'user', content: prompt }],
-                max_tokens: 200
-            });
-            const jawaban = response.data.choices[0].message.content;
+            const response = await axios.post(
+                'https://api-inference.huggingface.co/models/google/gemma-4-31b-it', { inputs: prompt }, { headers: { Authorization: `Bearer ${process.env.HF_TOKEN}` } }
+            );
+            // Jawaban bisa berbeda tergantung model, cek struktur responsenya
+            const jawaban = Array.isArray(response.data) && response.data[0] ? .generated_text ?
+                response.data[0].generated_text :
+                (typeof response.data === 'string' ? response.data : 'Tidak ada jawaban.');
             message.channel.send(jawaban);
         } catch (err) {
-            message.reply('Gagal menghubungi ChatGPT.');
+            message.reply('Gagal menghubungi Hugging Face API.');
             console.error(err);
         }
     }
