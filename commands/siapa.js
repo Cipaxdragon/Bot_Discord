@@ -1,25 +1,22 @@
-const cooldown = new Set();
-
 module.exports = {
     name: 'siapa',
     async execute(message, args) {
-        if (cooldown.has(message.author.id)) {
-            return message.reply('Tunggu beberapa detik sebelum menggunakan command ini lagi!');
-        }
-        cooldown.add(message.author.id);
-        setTimeout(() => cooldown.delete(message.author.id), 10000); // 10 detik cooldown
+
 
         try {
             if (!message.guild) return message.reply('Command ini hanya bisa digunakan di server!');
-            // Ambil dari cache dulu
+            // Ambil dari cache saja, filter bukan bot
             let members = message.guild.members.cache.filter(m => !m.user.bot);
-            // Jika cache terlalu sedikit, baru fetch semua
-            if (members.size < 2) {
-                await message.guild.members.fetch();
-                members = message.guild.members.cache.filter(m => !m.user.bot);
+            // Batasi maksimal 50 member random dari cache
+            let membersArray = Array.from(members.values());
+            if (membersArray.length > 50) {
+                // Shuffle dan ambil 50 random
+                membersArray = membersArray.sort(() => Math.random() - 0.5).slice(0, 50);
             }
-            if (members.size === 0) return message.reply('Tidak ada member yang bisa dipilih!');
-            const randomMember = members.random();
+            // Tampilkan daftar member hasil filter di terminal
+            console.log('Daftar member (bukan bot, max 50):', membersArray.map(m => `${m.user.tag} (${m.id})`).join(', '));
+            if (membersArray.length === 0) return message.reply('Tidak ada member yang bisa dipilih!');
+            const randomMember = membersArray[Math.floor(Math.random() * membersArray.length)];
             const pertanyaan = args.length > 0 ? args.join(' ') : 'yang paling random';
             message.channel.send(`Menurut saya, ${randomMember} adalah ${pertanyaan}!`);
         } catch (err) {
