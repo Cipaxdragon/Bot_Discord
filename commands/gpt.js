@@ -8,16 +8,38 @@ module.exports = {
         }
         const prompt = args.join(' ');
         try {
-            const response = await axios.post(
-                'https://api-inference.huggingface.co/models/google/gemma-2b-it', { inputs: prompt }, { headers: { Authorization: `Bearer ${process.env.HF_TOKEN}` } }
-            );
-            // Jawaban bisa berbeda tergantung model, cek struktur responsenya
-            const jawaban = Array.isArray(response.data) && response.data[0] && response.data[0].generated_text ?
-                response.data[0].generated_text :
-                (typeof response.data === 'string' ? response.data : 'Tidak ada jawaban.');
-            message.channel.send(jawaban);
+            const response = await axios({
+                method: 'post',
+                url: 'http://localhost:11434/api/generate',
+                data: {
+                    model: 'gemma3',
+                    prompt: prompt
+                        // stream: true // default true, bisa dihilangkan
+                },
+                responseType: 'stream'
+            });
+
+            let fullResponse = '';
+            response.data.on('data', (chunk) => {
+                // Setiap baris adalah JSON
+                const lines = chunk.toString().split('\n').filter(Boolean);
+                for (const line of lines) {
+                    try {
+                        const data = JSON.parse(line);
+                        if (data.response) {
+                            process.stdout.write(data.response); // tampilkan langsung di terminal
+                            fullResponse += data.response;
+                        }
+                    } catch (e) {}
+                }
+            });
+
+            response.data.on('end', () => {
+                message.channel.send(fullResponse || 'Tidak ada jawaban.');
+            });
+
         } catch (err) {
-            message.reply('Gagal menghubungi Hugging Face API.');
+            message.reply('Gagal menghubungi Ollama.');
             console.error(err);
         }
     }

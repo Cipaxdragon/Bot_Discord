@@ -22,8 +22,33 @@ fs.readdirSync(commandsPath).forEach(file => {
     }
 });
 
-client.once('clientReady', () => {
+
+client.once('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
+    // Kirim pesan otomatis ke channel tertentu
+    const channelId = '1043750772170555418'; // Ganti dengan ID channel tujuan
+    const channel = client.channels.cache.get(channelId);
+    if (channel) {
+        // channel.send('Aku Bangsat bukan asep');
+    } else {
+        console.log('Channel tidak ditemukan!');
+    }
+    const readline = require('readline');
+
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+
+    // Kirim pesan dari terminal ke channel Discord
+    rl.on('line', (input) => {
+        const channel = client.channels.cache.get(channelId);
+        if (channel) {
+            channel.send(input);
+        } else {
+            console.log('Channel tidak ditemukan!');
+        }
+    });
 });
 
 client.on('messageCreate', async message => {
