@@ -33,22 +33,14 @@ client.once('ready', () => {
     } else {
         console.log('Channel tidak ditemukan!');
     }
-    const readline = require('readline');
-
-    const rl = readline.createInterface({
-        input: process.stdin,
-        output: process.stdout
-    });
-
-    // Kirim pesan dari terminal ke channel Discord
-    rl.on('line', (input) => {
-        const channel = client.channels.cache.get(channelId);
-        if (channel) {
-            channel.send(input);
-        } else {
-            console.log('Channel tidak ditemukan!');
-        }
-    });
+    // --- SCHEDULED MESSAGE FEATURE (terstruktur di folder scheduled/) ---
+    const startScheduler = require('./scheduled/scheduler');
+    startScheduler(client);
+    // --- END SCHEDULED MESSAGE FEATURE ---
+    // --- FITUR KIRIM PESAN DARI TERMINAL (terstruktur di folder terminalmsg/) ---
+    const startTerminalMsgSender = require('./terminalmsg/terminalMsgSender');
+    startTerminalMsgSender(client);
+    // --- END FITUR KIRIM PESAN DARI TERMINAL ---
 });
 
 client.on('messageCreate', async message => {
