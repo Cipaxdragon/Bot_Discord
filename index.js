@@ -26,7 +26,7 @@ fs.readdirSync(commandsPath).forEach(file => {
 client.once('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     // Kirim pesan otomatis ke channel tertentu
-    const channelId = '1043750772170555418'; // Ganti dengan ID channel tujuan
+    const channelId = '847167613842489405'; // Ganti dengan ID channel tujuan
     const channel = client.channels.cache.get(channelId);
     if (channel) {
         // channel.send('Aku Bangsat bukan asep');
