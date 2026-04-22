@@ -19,6 +19,9 @@ function startScheduler(client) {
                 menit = now.getMinutes();
                 detik = now.getSeconds();
             }
+            // Cek hari jika ada properti days
+            const hari = now.toLocaleString('en-US', { weekday: 'long' }).toLowerCase();
+            const hariValid = !Array.isArray(schedule.days) || schedule.days.map(d=>d.toLowerCase()).includes(hari);
             if (
                 jam === schedule.hour &&
                 menit === schedule.minute &&
