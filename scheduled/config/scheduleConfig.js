@@ -12,13 +12,23 @@ module.exports = [
     },
     {
         channelId: '1496152512628265122',
-        userId: '1438390092426379417',
-        hour: 22,
-        minute: 7,
+        userId: '847162007080927302',
+        hour: 11,
+        minute: 30,
         timezone: 'Asia/Makassar',
-        message: 'Jangan lupa sarapan! ',
-        days: ['monday', 'friday'] // Reminder hanya aktif hari Senin dan Jumat
+        message: 'Jangan Lupa Absen Matakuliah APSI',
+        days: ['wednesday'] // Reminder hanya aktif hari Senin dan Rabu
     },
+    {
+        channelId: '1496152512628265122',
+        userId: '847162007080927302',
+        hour: 11,
+        minute: 30,
+        timezone: 'Asia/Makassar',
+        message: 'Jangan Lupa Absen Matakuliah APSI',
+        days: ['wednesday'] // Reminder hanya aktif hari Senin dan Rabu
+    },
+    
     // Tambahkan jadwal lain di sini jika perlu
 ];
 
