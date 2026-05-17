@@ -2,6 +2,7 @@ require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
 const { Client, GatewayIntentBits } = require('discord.js');
+const leveling = require('./leveling');
 
 const lockFilePath = path.join(__dirname, '.bot.lock');
 
@@ -121,6 +122,17 @@ client.on('messageCreate', async message => {
         return;
     }
     recentMessages.set(message.id, Date.now());
+
+    if (message.guild && !message.content.startsWith('!')) {
+        const awardResult = leveling.awardXp(message.guild.id, message.author.id);
+        if (awardResult.leveledUp) {
+            const newLevel = awardResult.player.level;
+            await message.channel.send(`Selamat ${message.author}, kamu naik ke level ${newLevel}!`);
+        }
+        console.log(`[XP] ${message.author.tag} +${awardResult.xpGained} XP (level ${awardResult.player.level})`);
+        return;
+    }
+
     if (!message.content.startsWith('!')) {
         console.log(`[MSG] Not a command (doesn't start with !)`);
         return;
