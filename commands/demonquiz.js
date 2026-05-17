@@ -11,7 +11,7 @@ module.exports = {
         if (subCommand === 'rank' || subCommand === 'top') {
             const leaderboard = quizGame.getLeaderboard(10);
             if (leaderboard.length === 0) {
-                return message.reply('Belum ada data Demonology Quiz. Mulai dengan `!demonquiz` lalu jawab pakai `!danswer <A/B/C/D>`.');
+                return message.reply('Belum ada data Demonology Quiz. Mulai dengan `!demonquiz` lalu jawab dengan `!jaw [a-d]`.');
             }
 
             const lines = await Promise.all(leaderboard.map(async item => {
@@ -68,7 +68,7 @@ module.exports = {
         const startResult = quizGame.startQuiz(message.channel, message.author.id);
         if (!startResult.ok) {
             if (startResult.reason === 'already_active') {
-                return message.reply('Masih ada Demonology Quiz aktif di channel ini. Jawab dulu pakai `!danswer <A/B/C/D>`.');
+                return message.reply('Masih ada Demonology Quiz aktif di channel ini. Jawab cukup `a`, `b`, `c`, atau `d`.');
             }
 
             return message.reply('Bank soal Demonology Quiz kosong.');
@@ -84,7 +84,7 @@ module.exports = {
             .setTitle('👻 Demonology Quiz Dimulai!')
             .setDescription(`**${q.question}**\n\n${optionLines}`)
             .addFields(
-                { name: 'Cara Jawab', value: '`!danswer A` atau `!danswer B`', inline: true },
+                { name: 'Cara Jawab', value: 'Cukup tulis `a`, `b`, `c`, atau `d`.', inline: true },
                 { name: 'Waktu', value: `${Math.floor(quizGame.ACTIVE_DURATION_MS / 1000)} detik`, inline: true },
                 { name: 'Hadiah', value: `Benar: +${quizGame.CORRECT_REWARD_POINTS} poin +Rp ${quizGame.CORRECT_MONEY_REWARD}`, inline: false }
             )

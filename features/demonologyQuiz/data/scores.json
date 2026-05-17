@@ -1,1 +1,20 @@
-{}
+{
+  "847162007080927302": {
+    "points": 90,
+    "correct": 3,
+    "wrong": 0,
+    "played": 3,
+    "currentStreak": 3,
+    "bestStreak": 3,
+    "lastAnsweredAt": 1779011057111
+  },
+  "1384748577665843230": {
+    "points": 90,
+    "correct": 3,
+    "wrong": 0,
+    "played": 3,
+    "currentStreak": 3,
+    "bestStreak": 3,
+    "lastAnsweredAt": 1779010505897
+  }
+}

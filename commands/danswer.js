@@ -3,8 +3,8 @@ const quizGame = require('../features/demonologyQuiz/demonologyQuizGame');
 const wallet = require('../features/economy/wallet');
 
 module.exports = {
-    name: 'danswer',
-    aliases: ['da'],
+    name: 'jaw',
+    aliases: ['j'],
     async execute(message, args) {
         const answer = String(args[0] || '').toUpperCase();
         const result = quizGame.answerQuiz(message.channel.id, message.author.id, answer);
@@ -15,7 +15,7 @@ module.exports = {
             }
 
             if (result.reason === 'invalid_answer') {
-                return message.reply('Jawaban tidak valid. Gunakan format: `!danswer A/B/C/D`');
+                return message.reply('Jawaban tidak valid. Cukup tulis `!jaw [a-d]` untuk menjawab.');
             }
 
             return message.reply('Terjadi kendala saat memproses jawaban Demonology Quiz.');

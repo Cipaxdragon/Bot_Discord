@@ -15,7 +15,7 @@ module.exports = {
                 { name: 'AI', value: '`!ai [pertanyaan]` - Chat dengan Gemini AI\n`!wo [pertanyaan]` - Chat dengan persona Prabowo\n`!gpt [pertanyaan]` - Chat dengan model Ollama' },
                 { name: 'Fun', value: '`!ping` - Cek koneksi bot\n`!apakah [pertanyaan]` - Jawab pertanyaan dengan Ya/Tidak random\n`!siapa [pertanyaan]` - Pilih member acak\n`!hi` - Sapaan dari bot\n`!jam [timezone]` - Lihat jam (wib/wita/wit/utc)\n`!model [tipe]` - Prediksi cuaca sederhana' },
                 { name: 'Quiz', value: '`!quiz` - Mulai quiz baru di channel\n`!jawab [A/B/C/D]` - Jawab quiz yang sedang aktif (jawaban benar dapat uang)\n`!quiz me` - Lihat profil quiz kamu\n`!quiz rank` - Lihat leaderboard quiz' },
-                { name: 'Demonology Quiz', value: '`!demonquiz` - Mulai quiz Demonology\n`!danswer [A/B/C/D]` - Jawab quiz Demonology yang sedang aktif\n`!demonquiz me` - Lihat profil Demonology Quiz kamu\n`!demonquiz rank` - Lihat leaderboard Demonology Quiz' },
+                { name: 'Demonology Quiz', value: '`!demonquiz` - Mulai quiz Demonology\nJawab cukup dengan `a`, `b`, `c`, atau `d`\n`!demonquiz me` - Lihat profil Demonology Quiz kamu\n`!demonquiz rank` - Lihat leaderboard Demonology Quiz' },
                 { name: '\u200B', value: 'Keterangan: Jawaban benar di quiz dapat uang. Gunakan `!bantu` atau `!help` untuk menampilkan pesan ini lagi.' }
             )
             .setFooter({ text: `Diminta oleh ${message.author.username}` });

@@ -15,6 +15,8 @@ const TITLE_STAGES = [
 ];
 
 const activeQuizzes = new Map();
+const recentQuestionIds = [];
+let lastQuestionCategory = null;
 
 function ensureScoresFile() {
     const dir = path.dirname(SCORES_FILE);
@@ -112,10 +114,69 @@ function buildProgressBar(progress, segments = 10) {
     return `${'█'.repeat(filled)}${'░'.repeat(Math.max(0, segments - filled))}`;
 }
 
+function inferQuestionCategory(question) {
+    const text = `${question.question || ''} ${question.explanation || ''}`.toLowerCase();
+
+    if (text.includes('audio') || text.includes('suara') || text.includes('teriakan') || text.includes('wail') || text.includes('step')) {
+        return 'audio';
+    }
+
+    if (text.includes('garam') || text.includes('blink') || text.includes('lari') || text.includes('cepat') || text.includes('roaming') || text.includes('hunt')) {
+        return 'movement';
+    }
+
+    if (text.includes('api') || text.includes('lentera') || text.includes('foto') || text.includes('headless') || text.includes('bayangan') || text.includes('tembok') || text.includes('corpse') || text.includes('teleport')) {
+        return 'visual';
+    }
+
+    if (text.includes('tips') || text.includes('disarankan') || text.includes('gunakan') || text.includes('cek') || text.includes('pantau') || text.includes('konfirmasi')) {
+        return 'tips';
+    }
+
+    if (text.includes('bakar') || text.includes('crucifix') || text.includes('elektronik') || text.includes('target') || text.includes('energi')) {
+        return 'behavior';
+    }
+
+    return 'general';
+}
+
+function trimRecentQuestionHistory() {
+    while (recentQuestionIds.length > 12) {
+        recentQuestionIds.shift();
+    }
+}
+
+function pickRandom(array) {
+    return array[Math.floor(Math.random() * array.length)];
+}
+
 function getRandomQuestion() {
     const questions = loadQuestions();
     if (questions.length === 0) return null;
-    return questions[Math.floor(Math.random() * questions.length)];
+
+    const grouped = new Map();
+
+    for (const question of questions) {
+        const category = inferQuestionCategory(question);
+        if (!grouped.has(category)) {
+            grouped.set(category, []);
+        }
+        grouped.get(category).push(question);
+    }
+
+    const categoryOrder = [...grouped.keys()];
+    const availableCategories = categoryOrder.filter(category => category !== lastQuestionCategory && grouped.get(category).length > 0);
+    const chosenCategory = availableCategories.length > 0 ? pickRandom(availableCategories) : pickRandom(categoryOrder);
+
+    const pool = grouped.get(chosenCategory) || questions;
+    const nonRecent = pool.filter(question => !recentQuestionIds.includes(question.id));
+    const chosenQuestion = pickRandom(nonRecent.length > 0 ? nonRecent : pool);
+
+    lastQuestionCategory = chosenCategory;
+    recentQuestionIds.push(chosenQuestion.id);
+    trimRecentQuestionHistory();
+
+    return chosenQuestion;
 }
 
 function startQuiz(channel, askedByUserId) {
@@ -155,13 +216,17 @@ function startQuiz(channel, askedByUserId) {
     };
 }
 
+function normalizeAnswer(rawAnswer) {
+    return String(rawAnswer || '').trim().toUpperCase().replace(/[^A-D]/g, '');
+}
+
 function answerQuiz(channelId, userId, rawAnswer) {
     const quiz = activeQuizzes.get(channelId);
     if (!quiz) {
         return { ok: false, reason: 'no_active_quiz' };
     }
 
-    const answer = String(rawAnswer || '').trim().toUpperCase();
+    const answer = normalizeAnswer(rawAnswer);
     if (!['A', 'B', 'C', 'D'].includes(answer)) {
         return { ok: false, reason: 'invalid_answer' };
     }

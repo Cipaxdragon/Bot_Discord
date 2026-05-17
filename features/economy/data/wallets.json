@@ -1,8 +1,8 @@
 {
   "847162007080927302": {
-    "money": 760,
+    "money": 1060,
     "earnedFromFishing": 610,
-    "earnedFromQuiz": 150,
+    "earnedFromQuiz": 450,
     "earnedFromDaily": 0,
     "earnedFromTransfer": 0,
     "earnedFromSale": 0,
@@ -10,7 +10,7 @@
     "lastDailyAt": 0,
     "dailyStreak": 0,
     "items": {},
-    "updatedAt": 1779005391652
+    "updatedAt": 1779011057113
   },
   "696218892661686282": {
     "money": 3035,
@@ -24,5 +24,18 @@
     "dailyStreak": 0,
     "items": {},
     "updatedAt": 1779005130467
+  },
+  "1384748577665843230": {
+    "money": 300,
+    "earnedFromFishing": 0,
+    "earnedFromQuiz": 300,
+    "earnedFromDaily": 0,
+    "earnedFromTransfer": 0,
+    "earnedFromSale": 0,
+    "spent": 0,
+    "lastDailyAt": 0,
+    "dailyStreak": 0,
+    "items": {},
+    "updatedAt": 1779010505898
   }
 }
