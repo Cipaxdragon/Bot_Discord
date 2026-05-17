@@ -1,0 +1,562 @@
+[
+  {
+    "id": "dq1",
+    "question": "Ghost mana yang bertipe Predatory?",
+    "options": ["Aswang", "Banshee", "Spirit", "Wraith"],
+    "answer": "A",
+    "explanation": "Aswang punya tipe Predatory di data ghostDetails."
+  },
+  {
+    "id": "dq2",
+    "question": "Ghost mana yang step-nya situasional dan makin cepat setiap kali berhasil membunuh?",
+    "options": ["Aswang", "Revenant", "Oni", "Ghoul"],
+    "answer": "A",
+    "explanation": "Aswang makin cepat setiap kali berhasil membunuh target."
+  },
+  {
+    "id": "dq3",
+    "question": "Ghost mana yang bertipe Harbinger?",
+    "options": ["Banshee", "Siren", "Nightmare", "Umbra"],
+    "answer": "A",
+    "explanation": "Banshee tercatat sebagai Harbinger."
+  },
+  {
+    "id": "dq4",
+    "question": "Ghost mana yang punya audio proof wail atau teriakan khas?",
+    "options": ["Banshee", "Ghoul", "Spirit", "Vex"],
+    "answer": "A",
+    "explanation": "Banshee punya proof audio berupa wail/teriakan khas."
+  },
+  {
+    "id": "dq5",
+    "question": "Ghost mana yang bertipe Aggressive?",
+    "options": ["Demon", "Shadow", "Siren", "Entity"],
+    "answer": "A",
+    "explanation": "Demon punya tipe Aggressive."
+  },
+  {
+    "id": "dq6",
+    "question": "Ghost mana yang salib atau crucifix-nya terlihat melayang saat kebakar ketika hunt?",
+    "options": ["Demon", "Wraith", "Dullahan", "Spirit"],
+    "answer": "A",
+    "explanation": "Demon dijelaskan dengan perilaku crucifix/salib melayang saat hunt."
+  },
+  {
+    "id": "dq7",
+    "question": "Ghost mana yang bertipe Hunter?",
+    "options": ["Dullahan", "Dybbuk", "Specter", "Wendigo"],
+    "answer": "A",
+    "explanation": "Dullahan punya tipe Hunter."
+  },
+  {
+    "id": "dq8",
+    "question": "Ghost mana yang bisa terlihat headless di foto?",
+    "options": ["Dullahan", "Keres", "Entity", "Revenant"],
+    "answer": "A",
+    "explanation": "Dullahan bisa terlihat headless di foto."
+  },
+  {
+    "id": "dq9",
+    "question": "Ghost mana yang bertipe Possessor?",
+    "options": ["Dybbuk", "Leviathan", "Phantom", "Spirit"],
+    "answer": "A",
+    "explanation": "Dybbuk tercatat sebagai Possessor."
+  },
+  {
+    "id": "dq10",
+    "question": "Ghost mana yang ciri utamanya bisa melempar mayat/corpse?",
+    "options": ["Dybbuk", "Wisp", "Vex", "Umbra"],
+    "answer": "A",
+    "explanation": "Dybbuk punya ciri corpse throw yang paling jelas."
+  },
+  {
+    "id": "dq11",
+    "question": "Ghost mana yang bertipe Anomalous?",
+    "options": ["Entity", "Ghoul", "Siren", "Shadow"],
+    "answer": "A",
+    "explanation": "Entity punya tipe Anomalous."
+  },
+  {
+    "id": "dq12",
+    "question": "Ghost mana yang dikenal punya kemampuan teleportasi seperti bayangan?",
+    "options": ["Entity", "Banshee", "Wraith", "Revenant"],
+    "answer": "A",
+    "explanation": "Entity dapat teleport dan berpindah seperti bayangan."
+  },
+  {
+    "id": "dq13",
+    "question": "Ghost mana yang bertipe Troublemaker?",
+    "options": ["Ghoul", "Umbra", "Oni", "Spirit"],
+    "answer": "A",
+    "explanation": "Ghoul punya tipe Troublemaker."
+  },
+  {
+    "id": "dq14",
+    "question": "Ghost mana yang tidak bisa mematikan elektronik?",
+    "options": ["Ghoul", "Vex", "Wraith", "Leviathan"],
+    "answer": "A",
+    "explanation": "Ghoul tidak bisa mematikan elektronik."
+  },
+  {
+    "id": "dq15",
+    "question": "Ghost mana yang bertipe Angel of Death?",
+    "options": ["Keres", "Dullahan", "Banshee", "Wisp"],
+    "answer": "A",
+    "explanation": "Keres tercatat sebagai Angel of Death."
+  },
+  {
+    "id": "dq16",
+    "question": "Ghost mana yang ngincer pemain dengan energi terendah?",
+    "options": ["Keres", "Siren", "Shadow", "Spirit"],
+    "answer": "A",
+    "explanation": "Keres menarget pemain dengan energi terendah."
+  },
+  {
+    "id": "dq17",
+    "question": "Ghost mana yang bertipe Chaotic?",
+    "options": ["Leviathan", "Wraith", "Nightmare", "Specter"],
+    "answer": "A",
+    "explanation": "Leviathan punya tipe Chaotic."
+  },
+  {
+    "id": "dq18",
+    "question": "Ghost mana yang terkenal melempar dua objek sekaligus sampai suaranya terdengar numpuk?",
+    "options": ["Leviathan", "Demon", "Vex", "Phantom"],
+    "answer": "A",
+    "explanation": "Leviathan punya pola double-throw yang khas."
+  },
+  {
+    "id": "dq19",
+    "question": "Ghost mana yang bertipe Hallucinatory?",
+    "options": ["Nightmare", "Umbra", "Siren", "Wendigo"],
+    "answer": "A",
+    "explanation": "Nightmare tercatat sebagai Hallucinatory."
+  },
+  {
+    "id": "dq20",
+    "question": "Ghost mana yang memicu halusinasi audio dan lebih agresif di area gelap?",
+    "options": ["Nightmare", "Spirit", "Vex", "Ghoul"],
+    "answer": "A",
+    "explanation": "Nightmare memicu halusinasi audio dan agresif di area gelap."
+  },
+  {
+    "id": "dq21",
+    "question": "Ghost mana yang bertipe Manifestor?",
+    "options": ["Oni", "Specter", "Aswang", "Umbra"],
+    "answer": "A",
+    "explanation": "Oni tercatat sebagai Manifestor."
+  },
+  {
+    "id": "dq22",
+    "question": "Ghost mana yang dikenal sebagai tipe pelari, mirip Wendigo?",
+    "options": ["Oni", "Banshee", "Spirit", "Ghoul"],
+    "answer": "A",
+    "explanation": "Oni punya ciri step pelari saat hunt."
+  },
+  {
+    "id": "dq23",
+    "question": "Ghost mana yang bertipe Ethereal?",
+    "options": ["Phantom", "Shadow", "Siren", "Wraith"],
+    "answer": "A",
+    "explanation": "Phantom punya tipe Ethereal."
+  },
+  {
+    "id": "dq24",
+    "question": "Ghost mana yang blink saat hunt lebih lambat dan cenderung lama muncul?",
+    "options": ["Phantom", "Dullahan", "Leviathan", "Keres"],
+    "answer": "A",
+    "explanation": "Phantom punya slow blink saat hunt."
+  },
+  {
+    "id": "dq25",
+    "question": "Ghost mana yang bertipe Vengeful?",
+    "options": ["Revenant", "Demon", "Entity", "Wisp"],
+    "answer": "A",
+    "explanation": "Revenant tercatat sebagai Vengeful."
+  },
+  {
+    "id": "dq26",
+    "question": "Ghost mana yang hunt-nya cenderung berhenti setelah berhasil membunuh target?",
+    "options": ["Revenant", "Siren", "Specter", "Umbra"],
+    "answer": "A",
+    "explanation": "Revenant biasanya berhenti hunt setelah kill tercapai."
+  },
+  {
+    "id": "dq27",
+    "question": "Ghost mana yang bertipe Shy?",
+    "options": ["Shadow", "Nightmare", "Ghoul", "Wraith"],
+    "answer": "A",
+    "explanation": "Shadow punya tipe Shy."
+  },
+  {
+    "id": "dq28",
+    "question": "Ghost mana yang penurunan suhunya kecil dan lambat, sekitar 0.05 per detik?",
+    "options": ["Shadow", "Demon", "Vex", "Wendigo"],
+    "answer": "A",
+    "explanation": "Shadow punya penurunan suhu halus sekitar 0.05 per detik."
+  },
+  {
+    "id": "dq29",
+    "question": "Ghost mana yang bertipe Luring?",
+    "options": ["Siren", "Keres", "Banshee", "Oni"],
+    "answer": "A",
+    "explanation": "Siren tercatat sebagai Luring."
+  },
+  {
+    "id": "dq30",
+    "question": "Ghost mana yang respons Spirit Box-nya cenderung suara perempuan dan bisa memberi slow saat mengejar?",
+    "options": ["Siren", "Spirit", "Ghoul", "Wisp"],
+    "answer": "A",
+    "explanation": "Siren punya suara Spirit Box perempuan dan efek slow saat chase."
+  },
+  {
+    "id": "dq31",
+    "question": "Ghost mana yang bertipe Mimic?",
+    "options": ["Skinwalker", "Vex", "Entity", "Shadow"],
+    "answer": "A",
+    "explanation": "Skinwalker adalah Mimic."
+  },
+  {
+    "id": "dq32",
+    "question": "Ghost mana yang dapat memunculkan orb palsu dan kadang meniru perilaku Vex atau Banshee?",
+    "options": ["Skinwalker", "Spirit", "Wraith", "Revenant"],
+    "answer": "A",
+    "explanation": "Skinwalker punya perilaku mimic dan orb palsu."
+  },
+  {
+    "id": "dq33",
+    "question": "Ghost mana yang bertipe Territorial?",
+    "options": ["Specter", "Phantom", "Leviathan", "Dullahan"],
+    "answer": "A",
+    "explanation": "Specter tercatat sebagai Territorial."
+  },
+  {
+    "id": "dq34",
+    "question": "Ghost mana yang suka lempar barang dan cenderung tidak roaming kecuali saat hunt?",
+    "options": ["Specter", "Wisp", "Ghoul", "Umbra"],
+    "answer": "A",
+    "explanation": "Specter suka lempar barang dan jarang roaming."
+  },
+  {
+    "id": "dq35",
+    "question": "Ghost mana yang bertipe Classic?",
+    "options": ["Spirit", "Banshee", "Oni", "Vex"],
+    "answer": "A",
+    "explanation": "Spirit punya tipe Classic."
+  },
+  {
+    "id": "dq36",
+    "question": "Ghost mana yang dapat mengubah warna api lilin atau lentera menjadi biru?",
+    "options": ["Spirit", "Wraith", "Siren", "Nightmare"],
+    "answer": "A",
+    "explanation": "Spirit punya ciri api/lentera berubah biru."
+  },
+  {
+    "id": "dq37",
+    "question": "Ghost mana yang bertipe Shadowy?",
+    "options": ["Umbra", "Specter", "Vex", "Ghoul"],
+    "answer": "A",
+    "explanation": "Umbra tercatat sebagai Shadowy."
+  },
+  {
+    "id": "dq38",
+    "question": "Ghost mana yang tidak punya suara jejak kaki saat bergerak?",
+    "options": ["Umbra", "Wraith", "Siren", "Phantom"],
+    "answer": "A",
+    "explanation": "Umbra tidak mengeluarkan suara jejak kaki."
+  },
+  {
+    "id": "dq39",
+    "question": "Ghost mana yang bertipe Phase Walker?",
+    "options": ["Vex", "Entity", "Wisp", "Demon"],
+    "answer": "A",
+    "explanation": "Vex punya tipe Phase Walker."
+  },
+  {
+    "id": "dq40",
+    "question": "Ghost mana yang sulit dideteksi lidar dan bisa menembus tembok?",
+    "options": ["Vex", "Spirit", "Ghoul", "Revenant"],
+    "answer": "A",
+    "explanation": "Vex sulit dideteksi lidar dan dapat menembus tembok."
+  },
+  {
+    "id": "dq41",
+    "question": "Ghost mana yang bertipe Monstrous?",
+    "options": ["Wendigo", "Oni", "Aswang", "Wisp"],
+    "answer": "A",
+    "explanation": "Wendigo tercatat sebagai Monstrous."
+  },
+  {
+    "id": "dq42",
+    "question": "Ghost mana yang dikenal sebagai tipe pelari seperti Oni dan sering muncul di bedroom Juniper?",
+    "options": ["Wendigo", "Ghost", "Siren", "Keres"],
+    "answer": "A",
+    "explanation": "Wendigo adalah tipe pelari dan sering muncul di bedroom Juniper."
+  },
+  {
+    "id": "dq43",
+    "question": "Ghost mana yang bertipe Flame-bound?",
+    "options": ["Wisp", "Spirit", "Specter", "Nightmare"],
+    "answer": "A",
+    "explanation": "Wisp tercatat sebagai Flame-bound."
+  },
+  {
+    "id": "dq44",
+    "question": "Ghost mana yang punya interaksi kuat terhadap api dan bisa terlihat seperti tembus api?",
+    "options": ["Wisp", "Wraith", "Banshee", "Dullahan"],
+    "answer": "A",
+    "explanation": "Wisp punya hubungan kuat dengan api dan bisa terlihat tembus api."
+  },
+  {
+    "id": "dq45",
+    "question": "Ghost mana yang bertipe Malevolent?",
+    "options": ["Wraith", "Ghoul", "Revenant", "Entity"],
+    "answer": "A",
+    "explanation": "Wraith punya tipe Malevolent."
+  },
+  {
+    "id": "dq46",
+    "question": "Ghost mana yang tidak menginjak garam?",
+    "options": ["Wraith", "Siren", "Leviathan", "Spirit"],
+    "answer": "A",
+    "explanation": "Wraith tidak menginjak garam."
+  },
+  {
+    "id": "dq47",
+    "question": "Ghost mana yang punya media proof foto lentera berubah biru?",
+    "options": ["Spirit", "Wraith", "Banshee", "Umbra"],
+    "answer": "A",
+    "explanation": "Spirit punya media proof foto lentera berubah biru."
+  },
+  {
+    "id": "dq48",
+    "question": "Ghost mana yang punya media proof audio step lari?",
+    "options": ["Oni", "Ghoul", "Demon", "Keres"],
+    "answer": "A",
+    "explanation": "Oni punya media proof audio step lari saat hunt."
+  },
+  {
+    "id": "dq49",
+    "question": "Ghost mana yang punya media proof audio wail atau teriakan khas?",
+    "options": ["Banshee", "Siren", "Wraith", "Vex"],
+    "answer": "A",
+    "explanation": "Banshee punya media proof audio wail atau teriakan khas."
+  },
+  {
+    "id": "dq50",
+    "question": "Ghost mana yang tipenya Pelari?",
+    "options": ["Wendigo", "Dullahan", "Ghoul", "Spirit"],
+    "answer": "A",
+    "explanation": "Wendigo punya tipe Pelari."
+  },
+  {
+    "id": "dq51",
+    "question": "Ghost mana yang tipenya sangat cocok dengan saran putus line-of-sight saat chase?",
+    "options": ["Dullahan", "Ghoul", "Spirit", "Wisp"],
+    "answer": "A",
+    "explanation": "Dullahan punya step situasional dan disarankan sering putus line-of-sight saat kite."
+  },
+  {
+    "id": "dq52",
+    "question": "Ghost mana yang tips-nya pakai jalur garam untuk cek perubahan speed?",
+    "options": ["Aswang", "Wraith", "Ghoul", "Shadow"],
+    "answer": "A",
+    "explanation": "Aswang disarankan diuji dengan jalur garam untuk melihat perubahan speed."
+  },
+  {
+    "id": "dq53",
+    "question": "Ghost mana yang tips-nya gunakan audio sebagai alat cek utama karena minim jejak langkah?",
+    "options": ["Umbra", "Spirit", "Demon", "Siren"],
+    "answer": "A",
+    "explanation": "Umbra disarankan dicek lewat audio karena minim jejak langkah."
+  },
+  {
+    "id": "dq54",
+    "question": "Ghost mana yang tips-nya perhatikan pola blink secara sabar saat hunt?",
+    "options": ["Phantom", "Dullahan", "Leviathan", "Keres"],
+    "answer": "A",
+    "explanation": "Phantom disarankan diamati pola blink-nya saat hunt."
+  },
+  {
+    "id": "dq55",
+    "question": "Ghost mana yang tips-nya pakai area gelap lebih sedikit dan waspada audio aneh?",
+    "options": ["Nightmare", "Wraith", "Ghoul", "Entity"],
+    "answer": "A",
+    "explanation": "Nightmare dikaitkan dengan area gelap dan audio aneh."
+  },
+  {
+    "id": "dq56",
+    "question": "Ghost mana yang tipenya Notorious karena tidak menginjak garam?",
+    "options": ["Wraith", "Spirit", "Vex", "Demon"],
+    "answer": "A",
+    "explanation": "Wraith tidak menginjak garam."
+  },
+  {
+    "id": "dq57",
+    "question": "Ghost mana yang punya evidence Wither, Handprints, dan Spirit Box?",
+    "options": ["Keres", "Ghoul", "Wisp", "Phantom"],
+    "answer": "A",
+    "explanation": "Keres punya evidence Wither, Handprints, dan Spirit Box."
+  },
+  {
+    "id": "dq58",
+    "question": "Ghost mana yang punya evidence Ghost Orbs, Handprints, dan Ghost Writing?",
+    "options": ["Leviathan", "Demon", "Wraith", "Umbra"],
+    "answer": "A",
+    "explanation": "Leviathan punya evidence Ghost Orbs, Handprints, dan Ghost Writing."
+  },
+  {
+    "id": "dq59",
+    "question": "Ghost mana yang punya evidence EMF Level 5, Spirit Box, dan Ghost Orbs?",
+    "options": ["Nightmare", "Wraith", "Ghoul", "Entity"],
+    "answer": "A",
+    "explanation": "Nightmare punya evidence EMF Level 5, Spirit Box, dan Ghost Orbs."
+  },
+  {
+    "id": "dq60",
+    "question": "Ghost mana yang punya evidence Wither, Ghost Orbs, dan Freezing Temps?",
+    "options": ["Vex", "Spirit", "Demon", "Keres"],
+    "answer": "A",
+    "explanation": "Vex punya evidence Wither, Ghost Orbs, dan Freezing Temps."
+  },
+  {
+    "id": "dq61",
+    "question": "Ghost mana yang bertipe Very High threat dan punya evidence Wither, EMF Level 5, Ghost Writing?",
+    "options": ["Aswang", "Banshee", "Spirit", "Shadow"],
+    "answer": "A",
+    "explanation": "Aswang punya threat Very High dan evidence Wither, EMF Level 5, Ghost Writing."
+  },
+  {
+    "id": "dq62",
+    "question": "Ghost mana yang punya evidence Ghost Orbs, Handprints, dan Freezing Temps dengan threat High?",
+    "options": ["Ghoul", "Wraith", "Demon", "Specter"],
+    "answer": "A",
+    "explanation": "Ghoul punya evidence Ghost Orbs, Handprints, dan Freezing Temps."
+  },
+  {
+    "id": "dq63",
+    "question": "Ghost mana yang punya evidence Spirit Box, Handprints, dan Laser Projector?",
+    "options": ["Entity", "Keres", "Wisp", "Dullahan"],
+    "answer": "A",
+    "explanation": "Entity punya evidence Spirit Box, Handprints, dan Laser Projector."
+  },
+  {
+    "id": "dq64",
+    "question": "Ghost mana yang bertipe High threat, evidence Wither, Handprints, Spirit Box, dan ngincer energi terendah?",
+    "options": ["Keres", "Leviathan", "Siren", "Revenant"],
+    "answer": "A",
+    "explanation": "Keres punya kombinasi ciri tersebut dan menarget energi terendah."
+  },
+  {
+    "id": "dq65",
+    "question": "Ghost mana yang punya media proof audio double throw atau lemparan ganda?",
+    "options": ["Leviathan", "Oni", "Wendigo", "Phantom"],
+    "answer": "A",
+    "explanation": "Leviathan punya media proof audio double throw."
+  },
+  {
+    "id": "dq66",
+    "question": "Ghost mana yang bertipe High threat, evidence EMF Level 5, Spirit Box, Ghost Orbs, dan memicu halusinasi audio?",
+    "options": ["Nightmare", "Umbra", "Ghoul", "Vex"],
+    "answer": "A",
+    "explanation": "Nightmare punya bukti tersebut dan efek halusinasi audio."
+  },
+  {
+    "id": "dq67",
+    "question": "Ghost mana yang bertipe Very High threat, evidence Laser Projector, Spirit Box, Freezing Temps, dan step pelari?",
+    "options": ["Oni", "Wendigo", "Wraith", "Specter"],
+    "answer": "A",
+    "explanation": "Oni punya tipe dan bukti tersebut serta dikenal sebagai pelari."
+  },
+  {
+    "id": "dq68",
+    "question": "Ghost mana yang bertipe High threat dan blink saat hunt lebih lambat?",
+    "options": ["Phantom", "Banshee", "Ghoul", "Umbra"],
+    "answer": "A",
+    "explanation": "Phantom dikenal dengan slow blink saat hunt."
+  },
+  {
+    "id": "dq69",
+    "question": "Ghost mana yang punya evidence Ghost Writing, EMF Level 5, dan Freezing Temps dengan threat Extreme?",
+    "options": ["Revenant", "Shadow", "Wraith", "Demon"],
+    "answer": "A",
+    "explanation": "Revenant punya threat Extreme dan evidence tersebut."
+  },
+  {
+    "id": "dq70",
+    "question": "Ghost mana yang punya penurunan suhu kecil sekitar 0.05 per detik dan threat Medium?",
+    "options": ["Shadow", "Spirit", "Ghoul", "Wisp"],
+    "answer": "A",
+    "explanation": "Shadow punya penurunan suhu kecil dan threat Medium."
+  },
+  {
+    "id": "dq71",
+    "question": "Ghost mana yang punya evidence Wither, Spirit Box, dan EMF Level 5 serta respons suara perempuan?",
+    "options": ["Siren", "Banshee", "Keres", "Entity"],
+    "answer": "A",
+    "explanation": "Siren punya bukti tersebut dan respons suara perempuan."
+  },
+  {
+    "id": "dq72",
+    "question": "Ghost mana yang bisa memunculkan orb palsu dan kadang meniru Vex atau Banshee?",
+    "options": ["Skinwalker", "Wraith", "Ghoul", "Dullahan"],
+    "answer": "A",
+    "explanation": "Skinwalker dapat memunculkan orb palsu dan meniru perilaku ghost lain."
+  },
+  {
+    "id": "dq73",
+    "question": "Ghost mana yang suka lempar barang dan cenderung tetap di area inti kecuali saat hunt?",
+    "options": ["Specter", "Umbra", "Spirit", "Vex"],
+    "answer": "A",
+    "explanation": "Specter punya perilaku lempar barang dan minim roaming."
+  },
+  {
+    "id": "dq74",
+    "question": "Ghost mana yang dapat mengubah warna api lilin/lentera menjadi biru dan bertipe Classic?",
+    "options": ["Spirit", "Banshee", "Demon", "Nightmare"],
+    "answer": "A",
+    "explanation": "Spirit bertipe Classic dan dapat mengubah api menjadi biru."
+  },
+  {
+    "id": "dq75",
+    "question": "Ghost mana yang tidak punya suara langkah saat bergerak dan bertipe Shadowy?",
+    "options": ["Umbra", "Wraith", "Vex", "Ghoul"],
+    "answer": "A",
+    "explanation": "Umbra bertipe Shadowy dan tidak punya suara langkah."
+  },
+  {
+    "id": "dq76",
+    "question": "Ghost mana yang sulit dideteksi lidar dan bisa menembus tembok dengan tipe Phase Walker?",
+    "options": ["Vex", "Entity", "Wisp", "Leviathan"],
+    "answer": "A",
+    "explanation": "Vex punya tipe Phase Walker dan sulit dideteksi lidar."
+  },
+  {
+    "id": "dq77",
+    "question": "Ghost mana yang punya media proof foto lentera biru dan bertipe Classic?",
+    "options": ["Spirit", "Siren", "Umbra", "Demon"],
+    "answer": "A",
+    "explanation": "Spirit punya media proof foto lentera biru."
+  },
+  {
+    "id": "dq78",
+    "question": "Ghost mana yang punya media proof audio step lari dan bertipe Monstrous?",
+    "options": ["Wendigo", "Oni", "Aswang", "Phantom"],
+    "answer": "A",
+    "explanation": "Wendigo punya media proof audio step lari dan bertipe Monstrous."
+  },
+  {
+    "id": "dq79",
+    "question": "Ghost mana yang punya threat High dan dapat mengeluarkan suara Spirit Box perempuan serta slow saat chase?",
+    "options": ["Siren", "Banshee", "Wraith", "Ghoul"],
+    "answer": "A",
+    "explanation": "Siren punya ciri tersebut."
+  },
+  {
+    "id": "dq80",
+    "question": "Ghost mana yang bertipe Hunter, bisa headless di foto, dan threat Very High?",
+    "options": ["Dullahan", "Dybbuk", "Wendigo", "Revenant"],
+    "answer": "A",
+    "explanation": "Dullahan bertipe Hunter, bisa headless di foto, dan threat Very High."
+  }
+]
