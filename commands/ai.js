@@ -1,7 +1,7 @@
 // Menyimpan riwayat chat per channel (maksimal 10 pesan terakhir)
 const chatHistories = {};
 
-const DISCORD_MESSAGE_LIMIT = 2000;
+const DISCORD_MESSAGE_LIMIT = 1900;
 
 function splitDiscordMessage(text, limit = DISCORD_MESSAGE_LIMIT) {
     const content = String(text || '');
@@ -92,6 +92,9 @@ module.exports = {
                 await message.channel.send(part);
             }
         } catch (err) {
+            if (err && err.status === 429) {
+                return message.reply('Kuota Gemini sedang habis/terbatas. Coba lagi beberapa saat lagi.');
+            }
             message.reply('Bentar Gw mau Ke Wc dulu Saudara sebangsah dan Setanah Air');
             console.error(err);
         }

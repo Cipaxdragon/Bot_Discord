@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const DISCORD_MESSAGE_LIMIT = 4000;
+const DISCORD_MESSAGE_LIMIT = 1900;
 
 function splitDiscordMessage(text, limit = DISCORD_MESSAGE_LIMIT) {
     const content = String(text || '');

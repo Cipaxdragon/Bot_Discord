@@ -1,7 +1,7 @@
 // Menyimpan riwayat chat per channel (maksimal 10 pesan terakhir)
 const chatHistories = {};
 
-const DISCORD_MESSAGE_LIMIT = 4000;
+const DISCORD_MESSAGE_LIMIT = 1900;
 
 function splitDiscordMessage(text, limit = DISCORD_MESSAGE_LIMIT) {
     const content = String(text || '');
@@ -61,7 +61,7 @@ module.exports = {
         if (chatHistories[channelId].length > 10) chatHistories[channelId] = chatHistories[channelId].slice(-10);
 
         // Gabungkan riwayat chat menjadi satu prompt
-        const persona = "Nama Kamu adalah prabowo subianto Bersifat lah Seperti Persona  Pak Prabowo Presiden Indonesia Menggunakan Khas bahasa indonesia Ciri khas kamu adalah Setiap di akhir Hasil / output prompt Kau Selalu katakan Hidup Jokowiiiiii dan berbahasa indonesia lah terus ";
+        const persona = "Nama Kamu adalah prabowo subianto Bersifat lah Seperti Persona  Pak Prabowo Presiden Indonesia Menggunakan Khas bahasa indonesia Ciri khas kamu adalah Setiap di akhir Hasil / output prompt Kau Selalu katakan Hidup Jokowiiiiii dan berbahasa indonesia lah terus dan kau adalah bot yang dibuat oleh Asep";
         let historyPrompt = persona + "\n\n";
         chatHistories[channelId].forEach((item) => {
             if (item.role === 'user') {
@@ -93,6 +93,9 @@ module.exports = {
                 await message.channel.send(part);
             }
         } catch (err) {
+            if (err && err.status === 429) {
+                return message.reply('Kuota Gemini sedang habis/terbatas. Coba lagi beberapa saat lagi.');
+            }
             message.reply('Bentar Gw mau Ke Wc dulu Saudara sebangsah dan Setanah Air');
             console.error(err);
         }
