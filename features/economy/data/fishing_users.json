@@ -1,8 +1,8 @@
 {
   "847162007080927302": {
     "money": 475,
-    "totalFish": 13,
-    "lastFishing": 1779026782775,
+    "totalFish": 14,
+    "lastFishing": 1779030787425,
     "inventory": [
       {
         "id": "ikan_warteg",
@@ -133,13 +133,23 @@
         "emoji": "🐟",
         "message": "Gurame merah putih yang membawa semangat kemerdekaan Indonesia.",
         "caughtAt": 1779026782772
+      },
+      {
+        "id": "lele_nasional",
+        "name": "Lele Nasional",
+        "rarity": "common",
+        "price": 50,
+        "chance": 40,
+        "emoji": "🐟",
+        "message": "Ikan ini siap masuk warteg dengan bumbu khas Asep.",
+        "caughtAt": 1779030787412
       }
     ]
   },
   "696218892661686282": {
     "money": 0,
-    "totalFish": 8,
-    "lastFishing": 1779005130467,
+    "totalFish": 9,
+    "lastFishing": 1779035058328,
     "inventory": [
       {
         "id": "gurame_patriotik",
@@ -220,6 +230,16 @@
         "emoji": "🐟",
         "message": "Mujair sederhana yang membanggakan bangsa dan negara.",
         "caughtAt": 1779005130466
+      },
+      {
+        "id": "tuna_gemoy",
+        "name": "Tuna Gemoy",
+        "rarity": "rare",
+        "price": 160,
+        "chance": 13,
+        "emoji": "🐟",
+        "message": "Tuna gemoy yang terkandang di perairan nusantara sejati.",
+        "caughtAt": 1779035058324
       }
     ]
   }
