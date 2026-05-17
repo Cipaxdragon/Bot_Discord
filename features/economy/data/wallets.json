@@ -1,16 +1,18 @@
 {
   "847162007080927302": {
-    "money": 1600,
-    "earnedFromFishing": 650,
-    "earnedFromQuiz": 950,
-    "earnedFromDaily": 0,
+    "money": 2915,
+    "earnedFromFishing": 790,
+    "earnedFromQuiz": 2025,
+    "earnedFromDaily": 250,
     "earnedFromTransfer": 0,
     "earnedFromSale": 0,
-    "spent": 0,
-    "lastDailyAt": 0,
-    "dailyStreak": 0,
-    "items": {},
-    "updatedAt": 1779025520718
+    "spent": 150,
+    "lastDailyAt": 1779027792910,
+    "dailyStreak": 1,
+    "items": {
+      "lucky_bait": 1
+    },
+    "updatedAt": 1779027792910
   },
   "696218892661686282": {
     "money": 3035,
@@ -37,5 +39,18 @@
     "dailyStreak": 0,
     "items": {},
     "updatedAt": 1779010505898
+  },
+  "1438390092426379417": {
+    "money": 2200,
+    "earnedFromFishing": 0,
+    "earnedFromQuiz": 2200,
+    "earnedFromDaily": 0,
+    "earnedFromTransfer": 0,
+    "earnedFromSale": 0,
+    "spent": 0,
+    "lastDailyAt": 0,
+    "dailyStreak": 0,
+    "items": {},
+    "updatedAt": 1779026580277
   }
 }

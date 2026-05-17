@@ -1,12 +1,12 @@
 {
   "847162007080927302": {
-    "points": 240,
-    "correct": 8,
+    "points": 540,
+    "correct": 18,
     "wrong": 1,
-    "played": 9,
-    "currentStreak": 2,
-    "bestStreak": 6,
-    "lastAnsweredAt": 1779025520717
+    "played": 19,
+    "currentStreak": 12,
+    "bestStreak": 12,
+    "lastAnsweredAt": 1779027087205
   },
   "1384748577665843230": {
     "points": 90,
@@ -16,5 +16,14 @@
     "currentStreak": 3,
     "bestStreak": 3,
     "lastAnsweredAt": 1779010505897
+  },
+  "1438390092426379417": {
+    "points": 660,
+    "correct": 22,
+    "wrong": 1,
+    "played": 23,
+    "currentStreak": 19,
+    "bestStreak": 19,
+    "lastAnsweredAt": 1779026580275
   }
 }

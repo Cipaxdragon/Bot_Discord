@@ -81,7 +81,7 @@ module.exports = {
 
         const quizEmbed = new EmbedBuilder()
             .setColor(0x1ABC9C)
-            .setTitle('👻 Demonology Quiz Dimulai!')
+            .setTitle('👻 Demonology Quiz DimulaiTod! ')
             .setDescription(`**${q.question}**\n\n${optionLines}`)
             .addFields(
                 { name: 'Cara Jawab', value: 'Gunakan `!jaw [a-d]` atau `!j [a-d]`\nContoh: `!jaw a` atau `!j b`', inline: false },
@@ -89,7 +89,7 @@ module.exports = {
                 { name: 'Hadiah', value: `Benar: +${quizGame.CORRECT_REWARD_POINTS} poin +Rp ${quizGame.CORRECT_MONEY_REWARD}`, inline: true }
             )
             .addFields({ name: 'Combo', value: 'Jawaban benar beruntun akan menambah streak dan best streak kamu.', inline: false })
-            .setFooter({ text: 'Quiz ini terinspirasi dari Demonology Roblox Wiki' })
+            .setFooter({ text: 'Quiz ini di desain oleh asep kalau lu Salah lu tolol banget sih' })
             .setTimestamp();
 
         return message.reply({ embeds: [quizEmbed] });

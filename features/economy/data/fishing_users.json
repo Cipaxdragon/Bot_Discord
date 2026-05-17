@@ -1,8 +1,8 @@
 {
   "847162007080927302": {
     "money": 475,
-    "totalFish": 12,
-    "lastFishing": 1779011762036,
+    "totalFish": 13,
+    "lastFishing": 1779026782775,
     "inventory": [
       {
         "id": "ikan_warteg",
@@ -123,6 +123,16 @@
         "emoji": "🐟",
         "message": "Ikan legendaris dari warung tegal, harga terjangkau untuk rakyat.",
         "caughtAt": 1779011762034
+      },
+      {
+        "id": "gurame_patriotik",
+        "name": "Gurame Patriotik",
+        "rarity": "rare",
+        "price": 140,
+        "chance": 10,
+        "emoji": "🐟",
+        "message": "Gurame merah putih yang membawa semangat kemerdekaan Indonesia.",
+        "caughtAt": 1779026782772
       }
     ]
   },

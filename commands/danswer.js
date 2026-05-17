@@ -30,8 +30,8 @@ module.exports = {
 
             const correctEmbed = new EmbedBuilder()
                 .setColor(0x2ECC71)
-                .setTitle('✅ Jawaban Benar!')
-                .setDescription(`Mantap ${message.author}, kamu dapat **+${result.pointsReward} poin** dan **+Rp ${result.moneyReward}**`)
+                .setTitle('✅ Jawaban Sodara Benar Anjing!')
+                .setDescription(`Mantap Anjing ${message.author}, kamu dapat **+${result.pointsReward} poin** dan **+Rp ${result.moneyReward}**`)
                 .addFields(
                     { name: 'Jawaban Kamu', value: result.answer, inline: true },
                     { name: 'Saldo', value: `Rp ${newBalance}`, inline: true },
@@ -47,8 +47,8 @@ module.exports = {
 
         const wrongEmbed = new EmbedBuilder()
             .setColor(0xE74C3C)
-            .setTitle('❌ Jawaban Kurang Tepat')
-            .setDescription(`Jawaban yang benar adalah **${result.correctAnswer}**`)
+            .setTitle('❌ Jawaban Salah Tolol banget lu')
+            .setDescription(`Jawaban yang benar adalah **${result.correctAnswer}** Tolol banget lu sumpah Mending lu pergi dari indo`)
             .addFields(
                 { name: 'Jawaban Kamu', value: result.answer, inline: true },
                 { name: 'Streak', value: `Reset ke 0`, inline: true },
