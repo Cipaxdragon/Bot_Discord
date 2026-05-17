@@ -1,0 +1,56 @@
+[
+  {
+    "id": "fishing_rod",
+    "name": "Fishing Rod",
+    "emoji": "🎣",
+    "price": 300,
+    "description": "Alat pancing standar. Cocok buat yang serius cari cuan dari mancing.",
+    "effect": "Bonus 15% hasil mancing per item, maksimal 45%.",
+    "stackable": true
+  },
+  {
+    "id": "lucky_bait",
+    "name": "Lucky Bait",
+    "emoji": "🪱",
+    "price": 150,
+    "description": "Umpan keberuntungan. Katanya bikin peluang ikan bagus lebih manis.",
+    "effect": "Punya peluang reroll ikan common agar naik rarity.",
+    "stackable": true
+  },
+  {
+    "id": "quiz_ticket",
+    "name": "Quiz Ticket",
+    "emoji": "📝",
+    "price": 500,
+    "description": "Tiket ikut quiz premium. Belum ada efek khusus, tapi keren di inventory.",
+    "effect": "Bonus +10 poin dan +Rp 50 saat jawaban quiz benar.",
+    "stackable": true
+  },
+  {
+    "id": "coffee_boost",
+    "name": "Coffee Boost",
+    "emoji": "☕",
+    "price": 250,
+    "description": "Minuman penyegar buat orang yang terlalu sering ngejar saldo.",
+    "effect": "Mengurangi cooldown mancing sebesar 5 detik per item, maksimal 15 detik.",
+    "stackable": true
+  },
+  {
+    "id": "golden_charm",
+    "name": "Golden Charm",
+    "emoji": "✨",
+    "price": 750,
+    "description": "Jimat ekonomi nasional. Hanya untuk kolektor kaya raya.",
+    "effect": "Bonus daily reward +Rp 50 per item, maksimal +Rp 150.",
+    "stackable": true
+  },
+  {
+    "id": "mega_crate",
+    "name": "Mega Crate",
+    "emoji": "📦",
+    "price": 1200,
+    "description": "Kejutan besar penuh isi misterius. Cocok buat pamer kekayaan.",
+    "effect": "Item kolektor dengan nilai jual tinggi.",
+    "stackable": true
+  }
+]

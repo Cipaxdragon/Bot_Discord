@@ -1,6 +1,7 @@
 const { EmbedBuilder } = require('discord.js');
 const quizGame = require('../features/quiz/quizGame');
 const wallet = require('../features/economy/wallet');
+const { getQuizEffects } = require('../features/economy/itemEffects');
 
 module.exports = {
     name: 'quiz',
@@ -37,6 +38,7 @@ module.exports = {
         if (subCommand === 'me' || subCommand === 'profile') {
             const score = quizGame.getUserScore(message.author.id);
             const userWallet = wallet.getWallet(message.author.id);
+            const quizEffects = getQuizEffects(message.author.id);
             const accuracy = score.played > 0 ? Math.round((score.correct / score.played) * 100) : 0;
 
             const meEmbed = new EmbedBuilder()
@@ -46,6 +48,7 @@ module.exports = {
                 .addFields(
                     { name: 'Poin', value: `${score.points}`, inline: true },
                     { name: 'Saldo', value: `Rp ${userWallet.money}`, inline: true },
+                    { name: 'Quiz Ticket', value: `${quizEffects.ticketCount} pcs`, inline: true },
                     { name: 'Main', value: `${score.played}`, inline: true },
                     { name: 'Akurasi', value: `${accuracy}%`, inline: true },
                     { name: 'Benar', value: `${score.correct}`, inline: true },
@@ -67,6 +70,7 @@ module.exports = {
         }
 
         const q = startResult.question;
+        const quizEffects = getQuizEffects(message.author.id);
         const optionLines = q.options
             .map((option, index) => `${String.fromCharCode(65 + index)}. ${option}`)
             .join('\n');
@@ -78,6 +82,7 @@ module.exports = {
             .addFields(
                 { name: 'Cara Jawab', value: '`!jawab A` atau `!jawab B`', inline: true },
                 { name: 'Waktu', value: '30 detik', inline: true },
+                { name: 'Bonus Ticket', value: `+${quizEffects.bonusPoints} poin / +Rp ${quizEffects.bonusMoney}`, inline: true },
                 { name: 'Hadiah', value: `Jawaban benar: +25 poin quiz +Rp ${quizGame.CORRECT_MONEY_REWARD}`, inline: false }
             )
             .setFooter({ text: 'Ekonomi terintegrasi: quiz + mancing masuk saldo yang sama' })

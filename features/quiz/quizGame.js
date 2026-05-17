@@ -120,7 +120,7 @@ function startQuiz(channel, askedByUserId) {
     };
 }
 
-function answerQuiz(channelId, userId, rawAnswer) {
+function answerQuiz(channelId, userId, rawAnswer, modifiers = {}) {
     const quiz = activeQuizzes.get(channelId);
     if (!quiz) {
         return {
@@ -142,6 +142,8 @@ function answerQuiz(channelId, userId, rawAnswer) {
 
     const scores = loadScores();
     const user = ensureUserScore(scores, userId);
+    const bonusPoints = Math.max(0, Number(modifiers.bonusPoints) || 0);
+    const bonusMoney = Math.max(0, Number(modifiers.bonusMoney) || 0);
 
     const correct = answer === quiz.question.answer;
     user.played += 1;
@@ -149,7 +151,7 @@ function answerQuiz(channelId, userId, rawAnswer) {
 
     if (correct) {
         user.correct += 1;
-        user.points += CORRECT_REWARD;
+        user.points += CORRECT_REWARD + bonusPoints;
     } else {
         user.wrong += 1;
         user.points = Math.max(0, user.points - WRONG_PENALTY);
@@ -163,8 +165,12 @@ function answerQuiz(channelId, userId, rawAnswer) {
         answer,
         correctAnswer: quiz.question.answer,
         question: quiz.question,
-        reward: correct ? CORRECT_REWARD : 0,
-        moneyReward: correct ? CORRECT_MONEY_REWARD : 0,
+        reward: correct ? CORRECT_REWARD + bonusPoints : 0,
+        baseReward: correct ? CORRECT_REWARD : 0,
+        bonusPoints: correct ? bonusPoints : 0,
+        moneyReward: correct ? CORRECT_MONEY_REWARD + bonusMoney : 0,
+        baseMoneyReward: correct ? CORRECT_MONEY_REWARD : 0,
+        bonusMoney: correct ? bonusMoney : 0,
         penalty: correct ? 0 : WRONG_PENALTY,
         user
     };

@@ -3,14 +3,26 @@
     "money": 760,
     "earnedFromFishing": 610,
     "earnedFromQuiz": 150,
+    "earnedFromDaily": 0,
+    "earnedFromTransfer": 0,
+    "earnedFromSale": 0,
     "spent": 0,
+    "lastDailyAt": 0,
+    "dailyStreak": 0,
+    "items": {},
     "updatedAt": 1779005391652
   },
   "696218892661686282": {
     "money": 3035,
     "earnedFromFishing": 1235,
     "earnedFromQuiz": 1800,
+    "earnedFromDaily": 0,
+    "earnedFromTransfer": 0,
+    "earnedFromSale": 0,
     "spent": 0,
+    "lastDailyAt": 0,
+    "dailyStreak": 0,
+    "items": {},
     "updatedAt": 1779005130467
   }
 }

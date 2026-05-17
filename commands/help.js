@@ -1,15 +1,16 @@
 const { EmbedBuilder } = require('discord.js');
 
 module.exports = {
-    name: 'bantu',
-    aliases: ['help'],
+    name: 'help',
+    aliases: ['bantu'],
     execute(message) {
         const embed = new EmbedBuilder()
             .setTitle('Daftar Perintah')
             .setColor(0x1abc9c)
             .setDescription('Gunakan prefix `!` di depan perintah. Berikut daftar perintah yang tersedia:')
             .addFields(
-                { name: 'Mancing', value: '`!mancing` - Memancing ikan untuk dapat uang\n`!inventory` - Lihat ikan yang sudah ditangkap\n`!balance` - Lihat total uang terintegrasi (mancing + quiz)\n`!stats` - Lihat statistik fishing (breakdown rarity)\n`!topfisher` - Lihat top 10 fisher di server' },
+                { name: 'Ekonomi', value: '`!mancing` - Memancing ikan untuk dapat uang\n`!shop` - Lihat daftar item yang bisa dibeli\n`!buy <id|nomor> [qty]` - Beli item dari shop\n`!sell <id|nomor> [qty]` - Jual item shop\n`!pay @user nominal` - Transfer uang ke user lain\n`!daily` - Ambil hadiah harian\n`!balance` - Lihat saldo terintegrasi (mancing + quiz + daily)' },
+                { name: 'Mancing', value: '`!inventory` - Lihat ikan yang sudah ditangkap\n`!inventoryshop` - Lihat item shop yang dimiliki\n`!stats` - Lihat statistik fishing (breakdown rarity)\n`!topfisher` - Lihat top 10 fisher di server' },
                 { name: 'Leveling Chat', value: '`!rank` - Lihat level dan progress XP kamu\n`!leaderboard` - Lihat peringkat XP server' },
                 { name: 'AI', value: '`!ai [pertanyaan]` - Chat dengan Gemini AI\n`!wo [pertanyaan]` - Chat dengan persona Prabowo\n`!gpt [pertanyaan]` - Chat dengan model Ollama' },
                 { name: 'Fun', value: '`!ping` - Cek koneksi bot\n`!apakah [pertanyaan]` - Jawab pertanyaan dengan Ya/Tidak random\n`!siapa [pertanyaan]` - Pilih member acak\n`!hi` - Sapaan dari bot\n`!jam [timezone]` - Lihat jam (wib/wita/wit/utc)\n`!model [tipe]` - Prediksi cuaca sederhana' },

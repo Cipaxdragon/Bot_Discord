@@ -75,6 +75,11 @@ fs.readdirSync(commandsPath).forEach(file => {
         const command = require(path.join(commandsPath, file));
         console.log(`[LOAD] Command loaded: ${command.name}`);
         commands.set(command.name, command);
+        if (Array.isArray(command.aliases)) {
+            command.aliases.forEach(alias => {
+                commands.set(alias, command);
+            });
+        }
     }
 });
 console.log(`[LOAD] Total commands loaded: ${commands.size}`);

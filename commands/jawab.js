@@ -1,12 +1,14 @@
 const { EmbedBuilder } = require('discord.js');
 const quizGame = require('../features/quiz/quizGame');
 const wallet = require('../features/economy/wallet');
+const { getQuizEffects } = require('../features/economy/itemEffects');
 
 module.exports = {
     name: 'jawab',
     async execute(message, args) {
         const answer = String(args[0] || '').toUpperCase();
-        const result = quizGame.answerQuiz(message.channel.id, message.author.id, answer);
+        const quizEffects = getQuizEffects(message.author.id);
+        const result = quizGame.answerQuiz(message.channel.id, message.author.id, answer, quizEffects);
 
         if (!result.ok) {
             if (result.reason === 'no_active_quiz') {
@@ -33,6 +35,7 @@ module.exports = {
                     { name: 'Jawaban Kamu', value: result.answer, inline: true },
                     { name: 'Poin Total', value: `${result.user.points}`, inline: true },
                     { name: 'Saldo', value: `Rp ${newBalance}`, inline: true },
+                    { name: 'Bonus Item', value: `Ticket: +${result.bonusPoints} poin / +Rp ${result.bonusMoney}`, inline: true },
                     { name: 'Info', value: result.question.explanation, inline: false }
                 )
                 .setFooter({ text: 'Lanjutkan dengan !quiz' })
@@ -48,6 +51,7 @@ module.exports = {
             .addFields(
                 { name: 'Jawaban Kamu', value: result.answer, inline: true },
                 { name: 'Poin Total', value: `${result.user.points}`, inline: true },
+                { name: 'Bonus Item', value: `Ticket: +${result.bonusPoints} poin / +Rp ${result.bonusMoney}`, inline: true },
                 { name: 'Info', value: result.question.explanation, inline: false }
             )
             .setFooter({ text: 'Gas lagi, mulai quiz baru dengan !quiz' })
