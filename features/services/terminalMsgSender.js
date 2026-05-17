@@ -1,4 +1,4 @@
-// terminalmsg/terminalMsgSender.js
+// features/services/terminalMsgSender.js
 // Fitur: Kirim pesan dari terminal ke channel Discord
 
 const readline = require('readline');

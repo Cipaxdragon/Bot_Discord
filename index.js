@@ -100,12 +100,12 @@ client.once('clientReady', () => {
     } else {
         console.log('Channel tidak ditemukan!');
     }
-    // --- SCHEDULED MESSAGE FEATURE (terstruktur di folder scheduled/) ---
-    const startScheduler = require('./scheduled/scheduler');
+    // --- SCHEDULED MESSAGE FEATURE (terstruktur di folder features/services/) ---
+    const startScheduler = require('./features/services/scheduler');
     startScheduler(client);
     // --- END SCHEDULED MESSAGE FEATURE ---
-    // --- FITUR KIRIM PESAN DARI TERMINAL (terstruktur di folder terminalmsg/) ---
-    const startTerminalMsgSender = require('./terminalmsg/terminalMsgSender');
+    // --- FITUR KIRIM PESAN DARI TERMINAL (terstruktur di folder features/services/) ---
+    const startTerminalMsgSender = require('./features/services/terminalMsgSender');
     startTerminalMsgSender(client);
     // --- END FITUR KIRIM PESAN DARI TERMINAL ---
 });

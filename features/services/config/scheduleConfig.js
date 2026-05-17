@@ -1,4 +1,4 @@
-// scheduled/config/scheduleConfig.js
+// features/services/config/scheduleConfig.js
 // Konfigurasi jadwal dan user yang di-mention
 
 module.exports = [
@@ -31,5 +31,3 @@ module.exports = [
     
     // Tambahkan jadwal lain di sini jika perlu
 ];
-
-//make hello world command

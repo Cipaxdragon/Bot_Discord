@@ -1,4 +1,4 @@
-// scheduled/scheduler.js
+// features/services/scheduler.js
 // Mengirim pesan terjadwal berdasarkan konfigurasi
 
 const scheduleConfig = require('./config/scheduleConfig');
