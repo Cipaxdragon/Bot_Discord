@@ -1,8 +1,8 @@
 {
   "847162007080927302": {
-    "money": 3365,
+    "money": 3440,
     "earnedFromFishing": 840,
-    "earnedFromQuiz": 2425,
+    "earnedFromQuiz": 2500,
     "earnedFromDaily": 250,
     "earnedFromTransfer": 0,
     "earnedFromSale": 0,
@@ -12,7 +12,7 @@
     "items": {
       "lucky_bait": 1
     },
-    "updatedAt": 1779035312494
+    "updatedAt": 1779036183555
   },
   "696218892661686282": {
     "money": 3270,
