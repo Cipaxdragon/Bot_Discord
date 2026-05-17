@@ -1,4 +1,4 @@
-const leveling = require('../leveling');
+const leveling = require('../features/leveling/leveling');
 const { EmbedBuilder } = require('discord.js');
 
 module.exports = {

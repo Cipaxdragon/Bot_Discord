@@ -4,7 +4,7 @@
  */
 
 const { EmbedBuilder } = require('discord.js');
-const fishingDb = require('../src/utils/fishingDb');
+const fishingDb = require('../features/economy/fishingDb');
 
 module.exports = {
     name: 'topfisher',

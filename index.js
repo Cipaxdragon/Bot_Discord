@@ -2,7 +2,7 @@ require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
 const { Client, GatewayIntentBits } = require('discord.js');
-const leveling = require('./leveling');
+const leveling = require('./features/leveling/leveling');
 
 const lockFilePath = path.join(__dirname, '.bot.lock');
 

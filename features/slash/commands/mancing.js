@@ -5,13 +5,12 @@
 
 const {
     SlashCommandBuilder,
-    EmbedBuilder,
-    PermissionFlagsBits
+    EmbedBuilder
 } = require('discord.js');
 
-const fishData = require('../data/fishing/fish.json');
-const { selectByChance } = require('../utils/randomWeighted');
-const fishingDb = require('../utils/fishingDb');
+const fishData = require('../../data/fishing/fish.json');
+const { selectByChance } = require('../../utils/randomWeighted');
+const fishingDb = require('../../economy/fishingDb');
 
 module.exports = {
     data: new SlashCommandBuilder()

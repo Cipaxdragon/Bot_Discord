@@ -1,12 +1,12 @@
 /**
- * Database utility untuk fishing system
+ * Database utility untuk fishing system (pindah ke features/economy)
  * Manage user data fishing di JSON file
  */
 
 const fs = require('fs');
 const path = require('path');
 
-const DATA_DIR = path.join(__dirname, '../../data');
+const DATA_DIR = path.join(__dirname, 'data');
 const USERS_FILE = path.join(DATA_DIR, 'fishing_users.json');
 
 /**

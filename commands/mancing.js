@@ -4,9 +4,9 @@
  */
 
 const { EmbedBuilder } = require('discord.js');
-const fishData = require('../src/data/fishing/fish.json');
-const { selectByChance } = require('../src/utils/randomWeighted');
-const fishingDb = require('../src/utils/fishingDb');
+const fishData = require('../features/slash/data/fishing/fish.json');
+const { selectByChance } = require('../features/slash/utils/randomWeighted');
+const fishingDb = require('../features/economy/fishingDb');
 
 module.exports = {
     name: 'mancing',
