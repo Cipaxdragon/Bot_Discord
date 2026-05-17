@@ -1,9 +1,16 @@
 {
   "847162007080927302": {
-    "money": 475,
-    "earnedFromFishing": 475,
-    "earnedFromQuiz": 0,
+    "money": 760,
+    "earnedFromFishing": 610,
+    "earnedFromQuiz": 150,
     "spent": 0,
-    "updatedAt": 1779003016683
+    "updatedAt": 1779005391652
+  },
+  "696218892661686282": {
+    "money": 3035,
+    "earnedFromFishing": 1235,
+    "earnedFromQuiz": 1800,
+    "spent": 0,
+    "updatedAt": 1779005130467
   }
 }

@@ -1,39 +1,23 @@
+const { EmbedBuilder } = require('discord.js');
+
 module.exports = {
-    name: 'help',
+    name: 'bantu',
+    aliases: ['help'],
     execute(message) {
-        message.channel.send(`Daftar Perintah:
-            
-**COMMAND MANCING:**
-            !mancing - Memancing ikan untuk dapat uang
-            !inventory - Lihat ikan yang sudah ditangkap
-            !balance - Lihat total uang terintegrasi (mancing + quiz)
-            !stats - Lihat statistik fishing (breakdown rarity)
-            !topfisher - Lihat top 10 fisher di server
+        const embed = new EmbedBuilder()
+            .setTitle('Daftar Perintah')
+            .setColor(0x1abc9c)
+            .setDescription('Gunakan prefix `!` di depan perintah. Berikut daftar perintah yang tersedia:')
+            .addFields(
+                { name: 'Mancing', value: '`!mancing` - Memancing ikan untuk dapat uang\n`!inventory` - Lihat ikan yang sudah ditangkap\n`!balance` - Lihat total uang terintegrasi (mancing + quiz)\n`!stats` - Lihat statistik fishing (breakdown rarity)\n`!topfisher` - Lihat top 10 fisher di server' },
+                { name: 'Leveling Chat', value: '`!rank` - Lihat level dan progress XP kamu\n`!leaderboard` - Lihat peringkat XP server' },
+                { name: 'AI', value: '`!ai [pertanyaan]` - Chat dengan Gemini AI\n`!wo [pertanyaan]` - Chat dengan persona Prabowo\n`!gpt [pertanyaan]` - Chat dengan model Ollama' },
+                { name: 'Fun', value: '`!ping` - Cek koneksi bot\n`!apakah [pertanyaan]` - Jawab pertanyaan dengan Ya/Tidak random\n`!siapa [pertanyaan]` - Pilih member acak\n`!hi` - Sapaan dari bot\n`!jam [timezone]` - Lihat jam (wib/wita/wit/utc)\n`!model [tipe]` - Prediksi cuaca sederhana' },
+                { name: 'Quiz', value: '`!quiz` - Mulai quiz baru di channel\n`!jawab [A/B/C/D]` - Jawab quiz yang sedang aktif (jawaban benar dapat uang)\n`!quiz me` - Lihat profil quiz kamu\n`!quiz rank` - Lihat leaderboard quiz' },
+                { name: '\u200B', value: 'Keterangan: Jawaban benar di quiz dapat uang. Gunakan `!bantu` atau `!help` untuk menampilkan pesan ini lagi.' }
+            )
+            .setFooter({ text: `Diminta oleh ${message.author.username}` });
 
-**COMMAND LEVELING CHAT:**
-            !rank - Lihat level dan progress XP kamu
-            !leaderboard - Lihat peringkat XP server
-
-**COMMAND AI:**
-            !ai [pertanyaan] - Chat dengan Gemini AI
-            !wo [pertanyaan] - Chat dengan persona Prabowo
-            !gpt [pertanyaan] - Chat dengan model Ollama
-
-**COMMAND FUN:**
-            !ping - Cek koneksi bot
-            !apakah [pertanyaan] - Jawab pertanyaan dengan Ya/Tidak random
-            !siapa [pertanyaan] - Pilih member acak
-            !hi - Sapaan dari bot
-            !jam [timezone] - Lihat jam (wib/wita/wit/utc)
-            !model [tipe] - Prediksi cuaca sederhana
-
-**COMMAND QUIZ:**
-            !quiz - Mulai quiz baru di channel
-            !jawab [A/B/C/D] - Jawab quiz yang sedang aktif (jawaban benar dapat uang)
-            !quiz me - Lihat profil quiz kamu
-            !quiz rank - Lihat leaderboard quiz
-
-            !help - Menampilkan pesan ini
-            `);
+        message.channel.send({ embeds: [embed] });
     }
 };

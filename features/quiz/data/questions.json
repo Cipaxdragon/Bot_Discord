@@ -68,5 +68,145 @@
     "options": ["Kemanusiaan yang adil dan beradab", "Ketuhanan Yang Maha Esa", "Persatuan Indonesia", "Kerakyatan yang dipimpin oleh hikmat kebijaksanaan"],
     "answer": "B",
     "explanation": "Sila pertama Pancasila adalah Ketuhanan Yang Maha Esa."
+  },
+  {
+    "id": "q11",
+    "question": "Hewan khas Indonesia yang berasal dari Nusa Tenggara Timur adalah?",
+    "options": ["Harimau", "Komodo", "Badak", "Orangutan"],
+    "answer": "B",
+    "explanation": "Komodo berasal dari Nusa Tenggara Timur."
+  },
+  {
+    "id": "q12",
+    "question": "Alat musik tradisional dari Jawa Barat adalah?",
+    "options": ["Angklung", "Sasando", "Kolintang", "Tifa"],
+    "answer": "A",
+    "explanation": "Angklung berasal dari Jawa Barat."
+  },
+  {
+    "id": "q13",
+    "question": "Presiden pertama Indonesia adalah?",
+    "options": ["Soeharto", "BJ Habibie", "Soekarno", "Jokowi"],
+    "answer": "C",
+    "explanation": "Presiden pertama Indonesia adalah Ir. Soekarno."
+  },
+  {
+    "id": "q14",
+    "question": "Gunung tertinggi di Indonesia adalah?",
+    "options": ["Semeru", "Kerinci", "Puncak Jaya", "Rinjani"],
+    "answer": "C",
+    "explanation": "Puncak Jaya adalah gunung tertinggi di Indonesia."
+  },
+  {
+    "id": "q15",
+    "question": "Siapa penemu lampu pijar?",
+    "options": ["Albert Einstein", "Isaac Newton", "Thomas Edison", "Nikola Tesla"],
+    "answer": "C",
+    "explanation": "Thomas Edison dikenal sebagai penemu lampu pijar modern."
+  },
+  {
+    "id": "q16",
+    "question": "Benua terbesar di dunia adalah?",
+    "options": ["Afrika", "Asia", "Eropa", "Amerika"],
+    "answer": "B",
+    "explanation": "Asia adalah benua terbesar di dunia."
+  },
+  {
+    "id": "q17",
+    "question": "Bahasa resmi negara Jepang adalah?",
+    "options": ["Mandarin", "Korea", "Jepang", "Thailand"],
+    "answer": "C",
+    "explanation": "Bahasa resmi Jepang adalah bahasa Jepang."
+  },
+  {
+    "id": "q18",
+    "question": "Apa nama mata uang Indonesia?",
+    "options": ["Ringgit", "Rupiah", "Peso", "Baht"],
+    "answer": "B",
+    "explanation": "Mata uang Indonesia adalah Rupiah."
+  },
+  {
+    "id": "q19",
+    "question": "Aplikasi chat yang digunakan untuk membuat bot ini adalah?",
+    "options": ["Discord", "LINE", "Telegram", "Skype"],
+    "answer": "A",
+    "explanation": "Bot ini dibuat untuk Discord."
+  },
+  {
+    "id": "q20",
+    "question": "Apa warna langit pada siang hari cerah?",
+    "options": ["Merah", "Hijau", "Biru", "Kuning"],
+    "answer": "C",
+    "explanation": "Langit terlihat biru pada siang hari cerah."
+  },
+  {
+    "id": "q21",
+    "question": "Planet yang dikenal sebagai Planet Merah adalah?",
+    "options": ["Mars", "Venus", "Saturnus", "Neptunus"],
+    "answer": "A",
+    "explanation": "Mars dikenal sebagai Planet Merah."
+  },
+  {
+    "id": "q22",
+    "question": "Berapa jumlah hari dalam seminggu?",
+    "options": ["5", "6", "7", "8"],
+    "answer": "C",
+    "explanation": "Dalam seminggu terdapat 7 hari."
+  },
+  {
+    "id": "q23",
+    "question": "Apa nama samudra terbesar di dunia?",
+    "options": ["Atlantik", "Hindia", "Pasifik", "Arktik"],
+    "answer": "C",
+    "explanation": "Samudra Pasifik adalah samudra terbesar di dunia."
+  },
+  {
+    "id": "q24",
+    "question": "Siapa pencipta lagu Indonesia Raya?",
+    "options": ["WR Supratman", "Chairil Anwar", "Ki Hajar Dewantara", "Ismail Marzuki"],
+    "answer": "A",
+    "explanation": "Indonesia Raya diciptakan oleh WR Supratman."
+  },
+  {
+    "id": "q25",
+    "question": "Apa nama hewan tercepat di darat?",
+    "options": ["Kuda", "Harimau", "Cheetah", "Serigala"],
+    "answer": "C",
+    "explanation": "Cheetah adalah hewan tercepat di darat."
+  },
+  {
+    "id": "q26",
+    "question": "Berapa hasil dari 15 + 27?",
+    "options": ["32", "42", "52", "62"],
+    "answer": "B",
+    "explanation": "15 + 27 = 42."
+  },
+  {
+    "id": "q27",
+    "question": "Apa nama ibukota Jepang?",
+    "options": ["Tokyo", "Seoul", "Bangkok", "Beijing"],
+    "answer": "A",
+    "explanation": "Ibukota Jepang adalah Tokyo."
+  },
+  {
+    "id": "q28",
+    "question": "Sumpah Pemuda diperingati setiap tanggal?",
+    "options": ["17 Agustus", "28 Oktober", "1 Juni", "20 Mei"],
+    "answer": "B",
+    "explanation": "Sumpah Pemuda diperingati pada 28 Oktober."
+  },
+  {
+    "id": "q29",
+    "question": "Apa nama planet tempat manusia tinggal?",
+    "options": ["Mars", "Venus", "Bumi", "Jupiter"],
+    "answer": "C",
+    "explanation": "Manusia tinggal di planet Bumi."
+  },
+  {
+    "id": "q30",
+    "question": "Apa nama laut di antara Pulau Jawa dan Pulau Kalimantan?",
+    "options": ["Laut Jawa", "Laut Banda", "Laut Flores", "Laut Arafura"],
+    "answer": "A",
+    "explanation": "Laut Jawa berada di antara Pulau Jawa dan Kalimantan."
   }
 ]

@@ -1,8 +1,8 @@
 {
   "847162007080927302": {
     "money": 475,
-    "totalFish": 8,
-    "lastFishing": 1779002622411,
+    "totalFish": 11,
+    "lastFishing": 1779005391652,
     "inventory": [
       {
         "id": "ikan_warteg",
@@ -83,6 +83,123 @@
         "emoji": "🐟",
         "message": "Ikan legendaris dari warung tegal, harga terjangkau untuk rakyat.",
         "caughtAt": 1779002622406
+      },
+      {
+        "id": "mujair_rakyat",
+        "name": "Mujair Rakyat",
+        "rarity": "common",
+        "price": 45,
+        "chance": 35,
+        "emoji": "🐟",
+        "message": "Mujair sederhana yang membanggakan bangsa dan negara.",
+        "caughtAt": 1779005030256
+      },
+      {
+        "id": "ikan_warteg",
+        "name": "Ikan Warteg",
+        "rarity": "common",
+        "price": 40,
+        "chance": 25,
+        "emoji": "🐟",
+        "message": "Ikan legendaris dari warung tegal, harga terjangkau untuk rakyat.",
+        "caughtAt": 1779005076331
+      },
+      {
+        "id": "lele_nasional",
+        "name": "Lele Nasional",
+        "rarity": "common",
+        "price": 50,
+        "chance": 40,
+        "emoji": "🐟",
+        "message": "Ikan ini siap masuk warteg dengan bumbu khas Asep.",
+        "caughtAt": 1779005391651
+      }
+    ]
+  },
+  "696218892661686282": {
+    "money": 0,
+    "totalFish": 8,
+    "lastFishing": 1779005130467,
+    "inventory": [
+      {
+        "id": "gurame_patriotik",
+        "name": "Gurame Patriotik",
+        "rarity": "rare",
+        "price": 140,
+        "chance": 10,
+        "emoji": "🐟",
+        "message": "Gurame merah putih yang membawa semangat kemerdekaan Indonesia.",
+        "caughtAt": 1779003916411
+      },
+      {
+        "id": "ikan_warteg",
+        "name": "Ikan Warteg",
+        "rarity": "common",
+        "price": 40,
+        "chance": 25,
+        "emoji": "🐟",
+        "message": "Ikan legendaris dari warung tegal, harga terjangkau untuk rakyat.",
+        "caughtAt": 1779004086263
+      },
+      {
+        "id": "tuna_gemoy",
+        "name": "Tuna Gemoy",
+        "rarity": "rare",
+        "price": 160,
+        "chance": 13,
+        "emoji": "🐟",
+        "message": "Tuna gemoy yang terkandang di perairan nusantara sejati.",
+        "caughtAt": 1779004299822
+      },
+      {
+        "id": "tuna_gemoy",
+        "name": "Tuna Gemoy",
+        "rarity": "rare",
+        "price": 160,
+        "chance": 13,
+        "emoji": "🐟",
+        "message": "Tuna gemoy yang terkandang di perairan nusantara sejati.",
+        "caughtAt": 1779004380147
+      },
+      {
+        "id": "ikan_kontol",
+        "name": "Ikan Kontol",
+        "rarity": "legendary",
+        "price": 480,
+        "chance": 4,
+        "emoji": "👑",
+        "message": "Lele istimewa yang dipercaya Dilepas oleh king jawa jir kalo lu dapat lu bisa kontol kontolin orang di mukanya aokwoawkao",
+        "caughtAt": 1779004568763
+      },
+      {
+        "id": "lele_nasional",
+        "name": "Lele Nasional",
+        "rarity": "common",
+        "price": 50,
+        "chance": 40,
+        "emoji": "🐟",
+        "message": "Ikan ini siap masuk warteg dengan bumbu khas Asep.",
+        "caughtAt": 1779004788351
+      },
+      {
+        "id": "tuna_gemoy",
+        "name": "Tuna Gemoy",
+        "rarity": "rare",
+        "price": 160,
+        "chance": 13,
+        "emoji": "🐟",
+        "message": "Tuna gemoy yang terkandang di perairan nusantara sejati.",
+        "caughtAt": 1779004822636
+      },
+      {
+        "id": "mujair_rakyat",
+        "name": "Mujair Rakyat",
+        "rarity": "common",
+        "price": 45,
+        "chance": 35,
+        "emoji": "🐟",
+        "message": "Mujair sederhana yang membanggakan bangsa dan negara.",
+        "caughtAt": 1779005130466
       }
     ]
   }
