@@ -84,7 +84,7 @@ module.exports = {
             .setTitle('👻 Demonology Quiz Dimulai!')
             .setDescription(`**${q.question}**\n\n${optionLines}`)
             .addFields(
-                { name: 'Cara Jawab', value: 'Cukup tulis `a`, `b`, `c`, atau `d`.', inline: true },
+                { name: 'Cara Jawab', value: 'Tulis `!jaw`Lalu opsi `a`, `b`, `c`, atau `d`.', inline: true },
                 { name: 'Waktu', value: `${Math.floor(quizGame.ACTIVE_DURATION_MS / 1000)} detik`, inline: true },
                 { name: 'Hadiah', value: `Benar: +${quizGame.CORRECT_REWARD_POINTS} poin +Rp ${quizGame.CORRECT_MONEY_REWARD}`, inline: false }
             )
