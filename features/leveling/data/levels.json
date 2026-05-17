@@ -1,17 +1,17 @@
 {
   "847162007080927302": {
-    "xp": 158,
-    "totalXp": 683,
+    "xp": 235,
+    "totalXp": 760,
     "level": 3,
-    "messages": 34,
-    "lastXpAt": 1779011606334
+    "messages": 38,
+    "lastXpAt": 1779017828985
   },
   "1384748577665843230": {
-    "xp": 92,
-    "totalXp": 192,
+    "xp": 131,
+    "totalXp": 231,
     "level": 1,
-    "messages": 10,
-    "lastXpAt": 1779010522692
+    "messages": 12,
+    "lastXpAt": 1779015229922
   },
   "1397450021435084860": {
     "xp": 60,
@@ -21,24 +21,24 @@
     "lastXpAt": 1778998471892
   },
   "696218892661686282": {
-    "xp": 118,
-    "totalXp": 393,
+    "xp": 166,
+    "totalXp": 441,
     "level": 2,
-    "messages": 20,
-    "lastXpAt": 1779006180767
+    "messages": 22,
+    "lastXpAt": 1779015274992
   },
   "449976879865266177": {
-    "xp": 40,
-    "totalXp": 40,
+    "xp": 64,
+    "totalXp": 64,
     "level": 0,
-    "messages": 2,
-    "lastXpAt": 1778999774910
+    "messages": 3,
+    "lastXpAt": 1779014054247
   },
   "1438390092426379417": {
-    "xp": 10,
-    "totalXp": 110,
+    "xp": 70,
+    "totalXp": 170,
     "level": 1,
-    "messages": 5,
-    "lastXpAt": 1779010130029
+    "messages": 8,
+    "lastXpAt": 1779017560820
   }
 }
