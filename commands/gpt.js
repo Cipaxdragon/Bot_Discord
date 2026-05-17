@@ -1,5 +1,47 @@
 const axios = require('axios');
 
+const DISCORD_MESSAGE_LIMIT = 4000;
+
+function splitDiscordMessage(text, limit = DISCORD_MESSAGE_LIMIT) {
+    const content = String(text || '');
+
+    if (content.length <= limit) {
+        return content ? [content] : [];
+    }
+
+    const chunks = [];
+    let currentChunk = '';
+
+    for (const line of content.split('\n')) {
+        const nextChunk = currentChunk ? `${currentChunk}\n${line}` : line;
+
+        if (nextChunk.length <= limit) {
+            currentChunk = nextChunk;
+            continue;
+        }
+
+        if (currentChunk) {
+            chunks.push(currentChunk);
+            currentChunk = '';
+        }
+
+        if (line.length <= limit) {
+            currentChunk = line;
+            continue;
+        }
+
+        for (let index = 0; index < line.length; index += limit) {
+            chunks.push(line.slice(index, index + limit));
+        }
+    }
+
+    if (currentChunk) {
+        chunks.push(currentChunk);
+    }
+
+    return chunks;
+}
+
 module.exports = {
     name: 'gpt',
     async execute(message, args) {
@@ -35,7 +77,21 @@ module.exports = {
             });
 
             response.data.on('end', () => {
-                message.channel.send(fullResponse || 'Tidak ada jawaban.');
+                const messages = splitDiscordMessage(fullResponse || 'Tidak ada jawaban.');
+
+                if (messages.length === 0) {
+                    message.channel.send('Tidak ada jawaban.');
+                    return;
+                }
+
+                (async () => {
+                    for (const part of messages) {
+                        await message.channel.send(part);
+                    }
+                })().catch((error) => {
+                    console.error(error);
+                    message.reply('Gagal mengirim jawaban panjang ke Discord.');
+                });
             });
 
         } catch (err) {

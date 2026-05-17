@@ -1,7 +1,7 @@
 // Menyimpan riwayat chat per channel (maksimal 10 pesan terakhir)
 const chatHistories = {};
 
-const DISCORD_MESSAGE_LIMIT = 4000;
+const DISCORD_MESSAGE_LIMIT = 2000;
 
 function splitDiscordMessage(text, limit = DISCORD_MESSAGE_LIMIT) {
     const content = String(text || '');
@@ -46,10 +46,10 @@ function splitDiscordMessage(text, limit = DISCORD_MESSAGE_LIMIT) {
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 
 module.exports = {
-    name: 'wo',
+    name: 'ai',
     async execute(message, args) {
         if (args.length === 0) {
-            return message.reply('Tanya Saya ');
+            return message.reply('Tanya Saya');
         }
         const channelId = message.channel.id;
         if (!chatHistories[channelId]) chatHistories[channelId] = [];
@@ -60,14 +60,13 @@ module.exports = {
         // Batasi hanya 10 pesan terakhir
         if (chatHistories[channelId].length > 10) chatHistories[channelId] = chatHistories[channelId].slice(-10);
 
-        // Gabungkan riwayat chat menjadi satu prompt
-        const persona = "Nama Kamu adalah prabowo subianto Bersifat lah Seperti Persona  Pak Prabowo Presiden Indonesia Menggunakan Khas bahasa indonesia Ciri khas kamu adalah Setiap di akhir Hasil / output prompt Kau Selalu katakan Hidup Jokowiiiiii dan berbahasa indonesia lah terus ";
-        let historyPrompt = persona + "\n\n";
+        // Gabungkan riwayat chat menjadi satu prompt tanpa persona
+        let historyPrompt = '';
         chatHistories[channelId].forEach((item) => {
             if (item.role === 'user') {
                 historyPrompt += `${item.name}: ${item.content}\n`;
             } else {
-                historyPrompt += `Prabowo: ${item.content}\n`;
+                historyPrompt += `Bot: ${item.content}\n`;
             }
         });
         try {
@@ -98,3 +97,4 @@ module.exports = {
         }
     }
 };
+
