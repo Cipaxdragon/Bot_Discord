@@ -150,6 +150,28 @@ function pickRandom(array) {
     return array[Math.floor(Math.random() * array.length)];
 }
 
+function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
+
+function shuffleQuestionOptions(question) {
+    const correctAnswer = question.answer;
+    const shuffledOptions = shuffleArray(question.options);
+    const correctIndex = shuffledOptions.indexOf(correctAnswer);
+    const newAnswer = String.fromCharCode(65 + correctIndex);
+
+    return {
+        ...question,
+        options: shuffledOptions,
+        answer: newAnswer
+    };
+}
+
 function getRandomQuestion() {
     const questions = loadQuestions();
     if (questions.length === 0) return null;
@@ -185,10 +207,12 @@ function startQuiz(channel, askedByUserId) {
         return { ok: false, reason: 'already_active' };
     }
 
-    const question = getRandomQuestion();
+    let question = getRandomQuestion();
     if (!question) {
         return { ok: false, reason: 'empty_question_bank' };
     }
+
+    question = shuffleQuestionOptions(question);
 
     const timeout = setTimeout(async () => {
         const current = activeQuizzes.get(channelId);

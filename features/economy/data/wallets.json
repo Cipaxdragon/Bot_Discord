@@ -1,8 +1,8 @@
 {
   "847162007080927302": {
-    "money": 1200,
+    "money": 1600,
     "earnedFromFishing": 650,
-    "earnedFromQuiz": 550,
+    "earnedFromQuiz": 950,
     "earnedFromDaily": 0,
     "earnedFromTransfer": 0,
     "earnedFromSale": 0,
@@ -10,7 +10,7 @@
     "lastDailyAt": 0,
     "dailyStreak": 0,
     "items": {},
-    "updatedAt": 1779011762035
+    "updatedAt": 1779025520718
   },
   "696218892661686282": {
     "money": 3035,

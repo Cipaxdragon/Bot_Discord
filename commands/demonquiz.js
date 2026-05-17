@@ -84,9 +84,9 @@ module.exports = {
             .setTitle('👻 Demonology Quiz Dimulai!')
             .setDescription(`**${q.question}**\n\n${optionLines}`)
             .addFields(
-                { name: 'Cara Jawab', value: 'Tulis `!jaw`Lalu opsi `a`, `b`, `c`, atau `d`.', inline: true },
+                { name: 'Cara Jawab', value: 'Gunakan `!jaw [a-d]` atau `!j [a-d]`\nContoh: `!jaw a` atau `!j b`', inline: false },
                 { name: 'Waktu', value: `${Math.floor(quizGame.ACTIVE_DURATION_MS / 1000)} detik`, inline: true },
-                { name: 'Hadiah', value: `Benar: +${quizGame.CORRECT_REWARD_POINTS} poin +Rp ${quizGame.CORRECT_MONEY_REWARD}`, inline: false }
+                { name: 'Hadiah', value: `Benar: +${quizGame.CORRECT_REWARD_POINTS} poin +Rp ${quizGame.CORRECT_MONEY_REWARD}`, inline: true }
             )
             .addFields({ name: 'Combo', value: 'Jawaban benar beruntun akan menambah streak dan best streak kamu.', inline: false })
             .setFooter({ text: 'Quiz ini terinspirasi dari Demonology Roblox Wiki' })
