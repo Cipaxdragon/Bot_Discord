@@ -7,12 +7,12 @@ const { EmbedBuilder } = require('discord.js');
 const fishData = require('../features/slash/data/fishing/fish.json');
 const { selectByChance } = require('../features/slash/utils/randomWeighted');
 const fishingDb = require('../features/economy/fishingDb');
+const wallet = require('../features/economy/wallet');
 
 module.exports = {
     name: 'mancing',
     async execute(message) {
         const userId = message.author.id;
-        const guildId = message.guild.id;
         
         // Cek cooldown
         if (fishingDb.isOnCooldown(userId)) {
@@ -31,7 +31,7 @@ module.exports = {
         
         // Update database
         fishingDb.addFish(userId, caughtFish);
-        const money = fishingDb.addMoney(userId, caughtFish.price);
+        const money = wallet.addMoney(userId, caughtFish.price, 'fishing');
         fishingDb.setLastFishing(userId, Date.now());
         
         console.log(`[MANCING] ${message.author.tag} caught ${caughtFish.name} (+Rp ${caughtFish.price})`);

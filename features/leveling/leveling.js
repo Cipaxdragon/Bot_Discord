@@ -24,7 +24,14 @@ function loadStore() {
         if (!raw) return {};
 
         const parsed = JSON.parse(raw);
-        return parsed && typeof parsed === 'object' ? parsed : {};
+        if (!parsed || typeof parsed !== 'object') return {};
+
+        const normalized = normalizeStore(parsed);
+        if (normalized.migrated) {
+            fs.writeFileSync(DATA_FILE, JSON.stringify(normalized.data, null, 2));
+        }
+
+        return normalized.data;
     } catch (error) {
         console.error('[LEVELING] Failed to load leveling data, starting fresh.', error);
         return {};
@@ -35,19 +42,82 @@ function saveStore() {
     fs.writeFileSync(DATA_FILE, JSON.stringify(store, null, 2));
 }
 
-function ensureGuild(guildId) {
-    if (!store[guildId]) {
-        store[guildId] = {};
-    }
-
-    return store[guildId];
+function getRequiredXp(level) {
+    return 100 + (level * 75);
 }
 
-function ensurePlayer(guildId, userId) {
-    const guildStore = ensureGuild(guildId);
+function calculateLevelFromTotalXp(totalXp) {
+    let level = 0;
+    let remainingXp = Math.max(0, Number(totalXp) || 0);
 
-    if (!guildStore[userId]) {
-        guildStore[userId] = {
+    while (remainingXp >= getRequiredXp(level)) {
+        remainingXp -= getRequiredXp(level);
+        level += 1;
+    }
+
+    return {
+        level,
+        xp: remainingXp
+    };
+}
+
+function normalizeStore(rawStore) {
+    const entries = Object.entries(rawStore);
+    if (entries.length === 0) {
+        return { data: {}, migrated: false };
+    }
+
+    const firstValue = entries[0][1];
+    const isNewFormat =
+        firstValue &&
+        typeof firstValue === 'object' &&
+        !Array.isArray(firstValue) &&
+        typeof firstValue.level === 'number' &&
+        typeof firstValue.totalXp === 'number';
+
+    if (isNewFormat) {
+        return { data: rawStore, migrated: false };
+    }
+
+    const migratedStore = {};
+
+    for (const [, guildUsers] of entries) {
+        if (!guildUsers || typeof guildUsers !== 'object' || Array.isArray(guildUsers)) continue;
+
+        for (const [userId, player] of Object.entries(guildUsers)) {
+            if (!player || typeof player !== 'object' || Array.isArray(player)) continue;
+
+            if (!migratedStore[userId]) {
+                migratedStore[userId] = {
+                    xp: 0,
+                    totalXp: 0,
+                    level: 0,
+                    messages: 0,
+                    lastXpAt: 0
+                };
+            }
+
+            migratedStore[userId].totalXp += Number(player.totalXp) || 0;
+            migratedStore[userId].messages += Number(player.messages) || 0;
+            migratedStore[userId].lastXpAt = Math.max(
+                migratedStore[userId].lastXpAt,
+                Number(player.lastXpAt) || 0
+            );
+        }
+    }
+
+    for (const userId of Object.keys(migratedStore)) {
+        const recalc = calculateLevelFromTotalXp(migratedStore[userId].totalXp);
+        migratedStore[userId].level = recalc.level;
+        migratedStore[userId].xp = recalc.xp;
+    }
+
+    return { data: migratedStore, migrated: true };
+}
+
+function ensurePlayer(userId) {
+    if (!store[userId]) {
+        store[userId] = {
             xp: 0,
             totalXp: 0,
             level: 0,
@@ -56,19 +126,15 @@ function ensurePlayer(guildId, userId) {
         };
     }
 
-    return guildStore[userId];
-}
-
-function getRequiredXp(level) {
-    return 100 + (level * 75);
+    return store[userId];
 }
 
 function getRandomXp() {
     return Math.floor(Math.random() * (XP_MAX - XP_MIN + 1)) + XP_MIN;
 }
 
-function awardXp(guildId, userId) {
-    const player = ensurePlayer(guildId, userId);
+function awardXp(userId) {
+    const player = ensurePlayer(userId);
     const now = Date.now();
 
     if (now - player.lastXpAt < COOLDOWN_MS) {
@@ -103,13 +169,12 @@ function awardXp(guildId, userId) {
     };
 }
 
-function getPlayer(guildId, userId) {
-    return ensurePlayer(guildId, userId);
+function getPlayer(userId) {
+    return ensurePlayer(userId);
 }
 
-function getRank(guildId, userId) {
-    const guildStore = ensureGuild(guildId);
-    const leaderboard = Object.entries(guildStore)
+function getRank(userId) {
+    const leaderboard = Object.entries(store)
         .map(([id, player]) => ({ userId: id, ...player }))
         .sort((a, b) => {
             if (b.level !== a.level) return b.level - a.level;
@@ -121,10 +186,8 @@ function getRank(guildId, userId) {
     return index === -1 ? null : index + 1;
 }
 
-function getLeaderboard(guildId, limit = 10) {
-    const guildStore = ensureGuild(guildId);
-
-    return Object.entries(guildStore)
+function getLeaderboard(limit = 10) {
+    return Object.entries(store)
         .map(([userId, player]) => ({ userId, ...player }))
         .sort((a, b) => {
             if (b.level !== a.level) return b.level - a.level;

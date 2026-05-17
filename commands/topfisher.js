@@ -5,6 +5,7 @@
 
 const { EmbedBuilder } = require('discord.js');
 const fishingDb = require('../features/economy/fishingDb');
+const wallet = require('../features/economy/wallet');
 
 module.exports = {
     name: 'topfisher',
@@ -14,15 +15,28 @@ module.exports = {
         }
         
         const allUsers = fishingDb.getAllUsers();
+        const allWallets = wallet.getAllWallets();
         
         // Convert ke array dan sort by money
-        const topFishers = Object.entries(allUsers)
-            .map(([userId, data]) => ({
-                userId,
-                money: data.money || 0,
-                totalFish: data.inventory ? data.inventory.length : 0,
-                legendary: data.inventory ? data.inventory.filter(f => f.rarity === 'legendary').length : 0
-            }))
+        const economyUserIds = new Set([
+            ...Object.keys(allUsers),
+            ...Object.keys(allWallets)
+        ]);
+
+        const topFishers = Array.from(economyUserIds)
+            .map((userId) => {
+                const fishData = allUsers[userId] || {};
+                const walletData = allWallets[userId] || {};
+
+                return {
+                    userId,
+                    money: Number(walletData.money) || 0,
+                    totalFish: Array.isArray(fishData.inventory) ? fishData.inventory.length : 0,
+                    legendary: Array.isArray(fishData.inventory)
+                        ? fishData.inventory.filter(f => f.rarity === 'legendary').length
+                        : 0
+                };
+            })
             .sort((a, b) => b.money - a.money)
             .slice(0, 10);
         

@@ -124,7 +124,7 @@ client.on('messageCreate', async message => {
     recentMessages.set(message.id, Date.now());
 
     if (message.guild && !message.content.startsWith('!')) {
-        const awardResult = leveling.awardXp(message.guild.id, message.author.id);
+        const awardResult = leveling.awardXp(message.author.id);
         if (awardResult.leveledUp) {
             const newLevel = awardResult.player.level;
             await message.channel.send(`Selamat ${message.author}, kamu naik ke level ${newLevel}!`);

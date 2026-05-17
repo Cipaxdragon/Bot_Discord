@@ -19,12 +19,8 @@ function getLevelColor(level) {
 module.exports = {
     name: 'rank',
     async execute(message) {
-        if (!message.guild) {
-            return message.reply('Command ini hanya bisa dipakai di server.');
-        }
-
-        const player = leveling.getPlayer(message.guild.id, message.author.id);
-        const rank = leveling.getRank(message.guild.id, message.author.id);
+        const player = leveling.getPlayer(message.author.id);
+        const rank = leveling.getRank(message.author.id);
         const requiredXp = leveling.getRequiredXp(player.level);
         const bar = createBar(player.xp, requiredXp);
         const rankText = rank ? `#${rank}` : 'Belum ada ranking';

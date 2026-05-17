@@ -5,12 +5,14 @@
 
 const { EmbedBuilder } = require('discord.js');
 const fishingDb = require('../features/economy/fishingDb');
+const wallet = require('../features/economy/wallet');
 
 module.exports = {
     name: 'inventory',
     async execute(message) {
         const userId = message.author.id;
         const user = fishingDb.getUser(userId);
+        const userWallet = wallet.getWallet(userId);
         
         if (!user.inventory || user.inventory.length === 0) {
             const emptyEmbed = new EmbedBuilder()
@@ -35,7 +37,7 @@ module.exports = {
         const embed = new EmbedBuilder()
             .setColor(0x4ECDC4)
             .setTitle(`🎒 Inventory ${message.author.tag}`)
-            .setDescription(`Total Ikan: **${user.inventory.length}**\nTotal Uang: **Rp ${user.money}**`);
+            .setDescription(`Total Ikan: **${user.inventory.length}**\nTotal Uang: **Rp ${userWallet.money}**`);
         
         if (byRarity.legendary.length > 0) {
             embed.addFields({

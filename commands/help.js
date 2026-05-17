@@ -6,7 +6,7 @@ module.exports = {
 **COMMAND MANCING:**
             !mancing - Memancing ikan untuk dapat uang
             !inventory - Lihat ikan yang sudah ditangkap
-            !balance - Lihat total uang kamu
+            !balance - Lihat total uang terintegrasi (mancing + quiz)
             !stats - Lihat statistik fishing (breakdown rarity)
             !topfisher - Lihat top 10 fisher di server
 
@@ -26,6 +26,12 @@ module.exports = {
             !hi - Sapaan dari bot
             !jam [timezone] - Lihat jam (wib/wita/wit/utc)
             !model [tipe] - Prediksi cuaca sederhana
+
+**COMMAND QUIZ:**
+            !quiz - Mulai quiz baru di channel
+            !jawab [A/B/C/D] - Jawab quiz yang sedang aktif (jawaban benar dapat uang)
+            !quiz me - Lihat profil quiz kamu
+            !quiz rank - Lihat leaderboard quiz
 
             !help - Menampilkan pesan ini
             `);

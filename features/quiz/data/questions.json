@@ -1,0 +1,72 @@
+[
+  {
+    "id": "q1",
+    "question": "Ibukota Indonesia adalah?",
+    "options": ["Bandung", "Surabaya", "Jakarta", "Medan"],
+    "answer": "C",
+    "explanation": "Ibukota Indonesia adalah Jakarta."
+  },
+  {
+    "id": "q2",
+    "question": "Lambang negara Indonesia adalah?",
+    "options": ["Garuda Pancasila", "Komodo", "Harimau Sumatra", "Elang Jawa"],
+    "answer": "A",
+    "explanation": "Lambang negara Indonesia adalah Garuda Pancasila."
+  },
+  {
+    "id": "q3",
+    "question": "Semboyan nasional Indonesia adalah?",
+    "options": ["Merdeka atau Mati", "Bhinneka Tunggal Ika", "Satya Wacana", "Tut Wuri Handayani"],
+    "answer": "B",
+    "explanation": "Bhinneka Tunggal Ika berarti berbeda-beda tetapi tetap satu."
+  },
+  {
+    "id": "q4",
+    "question": "Tanggal kemerdekaan Indonesia adalah?",
+    "options": ["17 Agustus 1945", "20 Mei 1908", "1 Juni 1945", "28 Oktober 1928"],
+    "answer": "A",
+    "explanation": "Indonesia merdeka pada 17 Agustus 1945."
+  },
+  {
+    "id": "q5",
+    "question": "Warna bendera Indonesia adalah?",
+    "options": ["Merah Putih", "Merah Biru", "Putih Hijau", "Merah Kuning"],
+    "answer": "A",
+    "explanation": "Bendera Indonesia berwarna merah dan putih."
+  },
+  {
+    "id": "q6",
+    "question": "Planet terbesar di tata surya adalah?",
+    "options": ["Bumi", "Mars", "Jupiter", "Venus"],
+    "answer": "C",
+    "explanation": "Jupiter adalah planet terbesar di tata surya."
+  },
+  {
+    "id": "q7",
+    "question": "Bahasa pemrograman yang sering dipakai untuk bot Discord di project ini adalah?",
+    "options": ["Python", "JavaScript", "Go", "Ruby"],
+    "answer": "B",
+    "explanation": "Bot ini menggunakan Node.js dan JavaScript."
+  },
+  {
+    "id": "q8",
+    "question": "Hasil dari 12 x 8 adalah?",
+    "options": ["84", "86", "96", "108"],
+    "answer": "C",
+    "explanation": "12 x 8 = 96."
+  },
+  {
+    "id": "q9",
+    "question": "Pulau terbesar di Indonesia adalah?",
+    "options": ["Jawa", "Kalimantan", "Sulawesi", "Bali"],
+    "answer": "B",
+    "explanation": "Kalimantan adalah pulau terbesar di Indonesia."
+  },
+  {
+    "id": "q10",
+    "question": "Urutan sila pertama Pancasila adalah?",
+    "options": ["Kemanusiaan yang adil dan beradab", "Ketuhanan Yang Maha Esa", "Persatuan Indonesia", "Kerakyatan yang dipimpin oleh hikmat kebijaksanaan"],
+    "answer": "B",
+    "explanation": "Sila pertama Pancasila adalah Ketuhanan Yang Maha Esa."
+  }
+]

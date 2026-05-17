@@ -5,12 +5,14 @@
 
 const { EmbedBuilder } = require('discord.js');
 const fishingDb = require('../features/economy/fishingDb');
+const wallet = require('../features/economy/wallet');
 
 module.exports = {
     name: 'stats',
     async execute(message) {
         const userId = message.author.id;
         const user = fishingDb.getUser(userId);
+        const userWallet = wallet.getWallet(userId);
         
         // Hitung rarity breakdown
         const rarity = {
@@ -33,7 +35,7 @@ module.exports = {
             .setColor(0x9933FF)
             .setTitle(`📊 Statistik Fishing ${message.author.tag}`)
             .addFields(
-                { name: '💰 Total Uang', value: `Rp ${user.money}`, inline: true },
+                { name: '💰 Total Uang', value: `Rp ${userWallet.money}`, inline: true },
                 { name: '🎣 Total Ikan Tangkap', value: `${user.inventory ? user.inventory.length : 0}`, inline: true },
                 { name: '📈 Rata-rata Harga Ikan', value: `Rp ${avgValue}`, inline: true },
                 { name: '⭐⭐⭐ Legendary', value: `${rarity.legendary}`, inline: true },

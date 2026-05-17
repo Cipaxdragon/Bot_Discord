@@ -1,8 +1,8 @@
 {
   "847162007080927302": {
-    "money": 435,
-    "totalFish": 7,
-    "lastFishing": 1779001334715,
+    "money": 475,
+    "totalFish": 8,
+    "lastFishing": 1779002622411,
     "inventory": [
       {
         "id": "ikan_warteg",
@@ -73,6 +73,16 @@
         "emoji": "🐟",
         "message": "Ikan ini siap masuk warteg dengan bumbu khas Asep.",
         "caughtAt": 1779001334709
+      },
+      {
+        "id": "ikan_warteg",
+        "name": "Ikan Warteg",
+        "rarity": "common",
+        "price": 40,
+        "chance": 25,
+        "emoji": "🐟",
+        "message": "Ikan legendaris dari warung tegal, harga terjangkau untuk rakyat.",
+        "caughtAt": 1779002622406
       }
     ]
   }

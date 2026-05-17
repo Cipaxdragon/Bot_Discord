@@ -4,11 +4,7 @@ const { EmbedBuilder } = require('discord.js');
 module.exports = {
     name: 'leaderboard',
     async execute(message) {
-        if (!message.guild) {
-            return message.reply('Command ini hanya bisa dipakai di server.');
-        }
-
-        const topPlayers = leveling.getLeaderboard(message.guild.id, 10);
+        const topPlayers = leveling.getLeaderboard(10);
 
         if (topPlayers.length === 0) {
             const emptyEmbed = new EmbedBuilder()
@@ -19,8 +15,8 @@ module.exports = {
         }
 
         const lines = await Promise.all(topPlayers.map(async (player) => {
-            const member = await message.guild.members.fetch(player.userId).catch(() => null);
-            const name = member ? member.user.tag : `<@${player.userId}>`;
+            const user = await message.client.users.fetch(player.userId).catch(() => null);
+            const name = user ? user.tag : `<@${player.userId}>`;
             
             // Buat medal emoji untuk top 3
             let medal = '   ';
@@ -34,7 +30,7 @@ module.exports = {
         const embed = new EmbedBuilder()
             .setColor(0xFFD700)
             .setTitle('🏆 Leaderboard XP')
-            .setDescription(`Top ${topPlayers.length} fisher di ${message.guild.name}`)
+            .setDescription(`Top ${topPlayers.length} global user berdasarkan XP`)
             .addFields(
                 { name: 'Ranking', value: lines.join('\n'), inline: false }
             )
